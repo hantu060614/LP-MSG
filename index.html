@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-y-scroll">
+<body class="bg-background text-on-background font-body-md antialiased overflow-y-scroll overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 font-sans antialiased">
     <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Floating Clean Card -->
-            <div class="absolute -left-4 md:-left-8 top-24 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
+            <div class="absolute left-2 md:left-0 top-24 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 rounded-full bg-[#D90429]/10 flex items-center justify-center text-[#D90429]">
                         <span class="material-symbols-outlined">workspace_premium</span>
@@ -108,7 +108,7 @@
             </div>
 
             <!-- Floating Clean Card 2: Projects -->
-            <div class="absolute -right-4 md:-right-8 bottom-32 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
+            <div class="absolute right-2 md:right-0 bottom-32 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
                 <div class="flex items-center gap-4">
                     <div>
                         <div class="text-2xl font-heading font-bold text-zinc-900 leading-none mb-1">500+</div>
@@ -119,20 +119,7 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Floating Clean Card 3: Success Rate -->
-            <div class="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-white px-8 py-5 rounded-full flex items-center gap-4 shadow-xl z-20 border border-zinc-100">
-                <div class="flex -space-x-3">
-                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=A&background=random" alt="Avatar">
-                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=B&background=random" alt="Avatar">
-                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=C&background=random" alt="Avatar">
-                </div>
-                <div class="w-px h-10 bg-zinc-200 mx-2"></div>
-                <div>
-                    <div class="text-sm font-heading font-bold text-zinc-900">98% Success Rate</div>
-                    <div class="text-[10px] text-zinc-500 uppercase font-medium tracking-wider">Klien Korporat</div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
