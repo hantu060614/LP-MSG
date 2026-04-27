@@ -3,63 +3,52 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Green Initiative 2024: MSG Commits to Net-Zero Construction | PT. Mari Sukses Gemilang</title>
+    <title>Berita | PT. Mari Sukses Gemilang</title>
     <link rel="stylesheet" href="css/output.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-background font-body-md antialiased overflow-y-scroll">
 
-<!-- Top Navigation Bar -->
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] font-['Plus_Jakarta_Sans'] antialiased">
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 font-sans antialiased">
     <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-        <!-- Logo (Kiri) -->
         <div class="w-1/4">
-            <a href="index.html" class="text-2xl font-black text-red-600 tracking-tighter">MSG</a>
+            <a href="index.html" class="text-2xl font-heading font-black text-[#D90429] tracking-tighter">MSG</a>
         </div>
-        
-        <!-- Links (Tengah) -->
-        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8">
-            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="index.html">Beranda</a>
-            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="about.html">Tentang Kami</a>
-            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="business.html">Unit Bisnis</a>
-            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="gallery.html">Galeri</a>
-            <a class="font-semibold text-red-600 border-b-2 border-red-600 pb-1" href="news-detail.html">Berita</a>
-            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="contact.html">Kontak</a>
+        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8 text-sm">
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="index.html">Beranda</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="business.html">Unit Bisnis</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
+            <a class="font-medium text-[#D90429]" href="news-detail.html">Berita</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="contact.html">Kontak</a>
         </div>
-
-        <!-- Tombol Hubungi Kami (Kanan) -->
         <div class="hidden md:flex w-1/4 justify-end">
-            <button onclick="window.location.href='contact.html'" class="bg-red-600 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-red-700 shadow-sm active:scale-95">Hubungi Kami</button>
+            <button onclick="window.location.href='contact.html'" class="bg-zinc-900 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-black transition-colors">Hubungi Kami</button>
         </div>
-
-        <!-- Tombol Menu Mobile -->
         <div class="md:hidden flex w-3/4 justify-end">
             <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8">
-                <!-- Menu Icon -->
                 <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-                <!-- Close Icon -->
                 <svg id="close-icon" class="absolute inset-0 w-8 h-8 opacity-0 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
     </div>
-    
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex flex-col px-6 py-4 space-y-4 pb-6">
-        <a class="text-zinc-600 font-semibold hover:text-red-600" href="index.html">Beranda</a>
-        <a class="text-zinc-600 font-semibold hover:text-red-600" href="about.html">Tentang Kami</a>
-        <a class="text-zinc-600 font-semibold hover:text-red-600" href="business.html">Unit Bisnis</a>
-        <a class="text-zinc-600 font-semibold hover:text-red-600" href="gallery.html">Galeri</a>
-        <a class="text-red-600 font-semibold" href="news-detail.html">Berita</a>
-        <a class="text-zinc-600 font-semibold hover:text-red-600" href="contact.html">Kontak</a>
+        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="index.html">Beranda</a>
+        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="about.html">Tentang Kami</a>
+        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="business.html">Unit Bisnis</a>
+        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="gallery.html">Galeri</a>
+        <a class="text-[#D90429] font-semibold" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="contact.html">Kontak</a>
         <div class="pt-4 mt-2 border-t border-zinc-100">
-            <button onclick="window.location.href='contact.html'" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-red-700">Hubungi Kami</button>
+            <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#B00020]">Hubungi Kami</button>
         </div>
     </div>
 </nav>
@@ -95,7 +84,7 @@
             
             <div class="flex items-center gap-3">
                 <span class="text-zinc-500 font-medium">Bagikan Artikel:</span>
-                <button class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-red-50 text-zinc-600 hover:text-red-600 flex items-center justify-center transition-all"><span class="material-symbols-outlined text-sm">link</span></button>
+                <button class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-red-50 text-zinc-600 hover:text-[#D90429] flex items-center justify-center transition-all"><span class="material-symbols-outlined text-sm">link</span></button>
                 <button class="w-8 h-8 rounded-full bg-zinc-100 hover:bg-blue-50 text-zinc-600 hover:text-blue-600 flex items-center justify-center transition-all"><span class="material-symbols-outlined text-sm">share</span></button>
             </div>
         </div>
@@ -117,7 +106,7 @@
         <article class="prose prose-lg md:prose-xl prose-zinc max-w-none font-['Plus_Jakarta_Sans'] leading-relaxed" data-aos="fade-up">
             
             <p class="text-xl md:text-2xl text-zinc-600 leading-relaxed font-light mb-10">
-                <span class="float-left text-7xl font-black text-red-600 mr-4 mt-2 leading-[0.8]">P</span>T. Mari Sukses Gemilang (MSG) secara resmi meluncurkan kerangka keberlanjutan terbarunya hari ini, yang menargetkan pencapaian <em>Net-Zero Emissions</em> dalam semua proyek konstruksi komersial di bawah naungan MSG Building Group pada tahun 2040.
+                <span class="float-left text-7xl font-black text-[#D90429] mr-4 mt-2 leading-[0.8]">P</span>T. Mari Sukses Gemilang (MSG) secara resmi meluncurkan kerangka keberlanjutan terbarunya hari ini, yang menargetkan pencapaian <em>Net-Zero Emissions</em> dalam semua proyek konstruksi komersial di bawah naungan MSG Building Group pada tahun 2040.
             </p>
 
             <p class="mb-8">
@@ -139,15 +128,15 @@
 
             <ul class="space-y-4 mb-10 text-zinc-700">
                 <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-red-600 mt-1 flex-shrink-0">check_circle</span>
+                    <span class="material-symbols-outlined text-[#D90429] mt-1 flex-shrink-0">check_circle</span>
                     <div><strong>Material Ramah Lingkungan:</strong> Beralih menggunakan beton rendah karbon, baja daur ulang, dan kayu bersertifikat FSC di setiap portofolio infrastruktur baru.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-red-600 mt-1 flex-shrink-0">check_circle</span>
+                    <span class="material-symbols-outlined text-[#D90429] mt-1 flex-shrink-0">check_circle</span>
                     <div><strong>Efisiensi Energi Operasional:</strong> Mengaplikasikan panel surya komersial dan sistem manajemen gedung pintar berbasis AI di fasilitas konstruksi untuk mengurangi konsumsi listrik secara drastis.</div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-red-600 mt-1 flex-shrink-0">check_circle</span>
+                    <span class="material-symbols-outlined text-[#D90429] mt-1 flex-shrink-0">check_circle</span>
                     <div><strong>Sertifikasi Global:</strong> Mewajibkan semua gedung baru yang dikembangkan oleh MSG Building Group mencapai minimal standar sertifikasi <em>LEED Gold</em> atau setara.</div>
                 </li>
             </ul>
@@ -182,7 +171,7 @@
                 <h2 class="font-h2 text-3xl font-bold mb-2">Berita Terkait</h2>
                 <p class="text-zinc-500">Jelajahi informasi dan pembaruan lain dari perusahaan kami.</p>
             </div>
-            <a href="index.html" class="text-red-600 font-bold flex items-center gap-2 hover:gap-3 transition-all hidden md:flex">
+            <a href="index.html" class="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all hidden md:flex">
                 Lihat Semua Berita <span class="material-symbols-outlined">arrow_forward</span>
             </a>
         </div>
@@ -195,12 +184,12 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-4 text-xs text-zinc-500 mb-4">
-                        <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full font-semibold">Promo</span>
+                        <span class="bg-red-50 text-[#D90429] px-3 py-1 rounded-full font-semibold">Promo</span>
                         <span>24 Mei 2024</span>
                     </div>
-                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-red-600 transition-colors line-clamp-2">MSG Annual Business Summit: Transforming the Future of Fintech</h4>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Annual Business Summit: Transforming the Future of Fintech</h4>
                     <p class="text-zinc-500 text-sm line-clamp-3 mb-6">Join us for a three-day intensive summit featuring world-class speakers and innovative workshops.</p>
-                    <a class="text-sm font-bold text-red-600 flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+                    <a class="text-sm font-bold text-[#D90429] flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
                 </div>
             </div>
 
@@ -211,12 +200,12 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-4 text-xs text-zinc-500 mb-4">
-                        <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full font-semibold">Event</span>
+                        <span class="bg-red-50 text-[#D90429] px-3 py-1 rounded-full font-semibold">Event</span>
                         <span>12 Mei 2024</span>
                     </div>
-                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-red-600 transition-colors line-clamp-2">MSG Awarded Corporate Excellence at Asia Business Awards</h4>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Awarded Corporate Excellence at Asia Business Awards</h4>
                     <p class="text-zinc-500 text-sm line-clamp-3 mb-6">Recognizing our commitment to operational excellence and innovative growth across Southeast Asia.</p>
-                    <a class="text-sm font-bold text-red-600 flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+                    <a class="text-sm font-bold text-[#D90429] flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
                 </div>
             </div>
             
@@ -227,12 +216,12 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center gap-4 text-xs text-zinc-500 mb-4">
-                        <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full font-semibold">Berita</span>
+                        <span class="bg-red-50 text-[#D90429] px-3 py-1 rounded-full font-semibold">Berita</span>
                         <span>05 Mei 2024</span>
                     </div>
-                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-red-600 transition-colors line-clamp-2">MSG Ventures Mengumumkan Pendanaan untuk Ekosistem Startup</h4>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Ventures Mengumumkan Pendanaan untuk Ekosistem Startup</h4>
                     <p class="text-zinc-500 text-sm line-clamp-3 mb-6">Inisiatif pendanaan tahap awal ditujukan untuk memicu pertumbuhan di sektor teknologi finansial lokal.</p>
-                    <a class="text-sm font-bold text-red-600 flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+                    <a class="text-sm font-bold text-[#D90429] flex items-center gap-1" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">chevron_right</span></a>
                 </div>
             </div>
         </div>
@@ -240,41 +229,41 @@
 </section>
 
 <!-- Standardized Footer -->
-<footer class="w-full border-t border-zinc-100 bg-zinc-950 font-['Plus_Jakarta_Sans'] text-sm text-zinc-400">
-    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="space-y-4">
-            <div class="text-xl font-black text-red-600">MSG</div>
-            <p class="text-zinc-500 leading-relaxed">PT. Mari Sukses Gemilang is a leading multi-sector corporation committed to excellence and sustainable innovation in Indonesia.</p>
+<footer class="w-full border-t border-zinc-800 bg-zinc-950 font-sans text-sm text-zinc-400">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="space-y-6">
+            <div class="text-2xl font-heading font-black text-[#D90429] tracking-tighter">MSG</div>
+            <p class="text-zinc-500 leading-relaxed">PT. Mari Sukses Gemilang adalah korporasi multi-sektor terkemuka yang berkomitmen pada keunggulan dan inovasi berkelanjutan di Indonesia.</p>
         </div>
         <div>
-            <h4 class="font-bold text-white mb-4">Tautan Cepat</h4>
-            <div class="flex flex-col space-y-2">
-                <a class="text-zinc-500 hover:text-white transition-all" href="index.html">Beranda</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="about.html">Tentang Kami</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="business.html">Unit Bisnis</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="gallery.html">Galeri</a>
+            <h4 class="font-bold text-white mb-6 text-base tracking-wide">Tautan Cepat</h4>
+            <div class="flex flex-col space-y-3">
+                <a class="text-zinc-500 hover:text-white transition-colors" href="index.html">Beranda</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="about.html">Tentang Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="business.html">Unit Bisnis</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="gallery.html">Galeri</a>
             </div>
         </div>
         <div>
-            <h4 class="font-bold text-white mb-4">Dukungan</h4>
-            <div class="flex flex-col space-y-2">
-                <a class="text-red-500 font-semibold" href="news-detail.html">Berita</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="contact.html">Hubungi Kami</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Kebijakan Privasi</a>
-                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Syarat & Ketentuan</a>
+            <h4 class="font-bold text-white mb-6 text-base tracking-wide">Dukungan</h4>
+            <div class="flex flex-col space-y-3">
+                <a class="text-zinc-500 hover:text-white transition-colors" href="news-detail.html">Berita</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="contact.html">Hubungi Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="javascript:void(0)">Kebijakan Privasi</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="javascript:void(0)">Syarat &amp; Ketentuan</a>
             </div>
         </div>
         <div>
-            <h4 class="font-bold text-white mb-4">Ikuti Kami</h4>
-            <div class="flex gap-4">
-                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">link</span></a>
-                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">public</span></a>
-                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">mail</span></a>
+            <h4 class="font-bold text-white mb-6 text-base tracking-wide">Ikuti Kami</h4>
+            <div class="flex gap-3">
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">link</span></a>
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">public</span></a>
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">mail</span></a>
             </div>
         </div>
     </div>
     <div class="max-w-7xl mx-auto px-6 py-8 border-t border-zinc-900 text-center text-zinc-600">
-        © 2024 PT. Mari Sukses Gemilang. Semua rights reserved.
+        © 2024 PT. Mari Sukses Gemilang. Semua hak cipta dilindungi.
     </div>
 </footer>
 
