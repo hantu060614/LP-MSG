@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="stylesheet" href="css/output.css"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<title>Gallery | PT. Mari Sukses Gemilang</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+</head>
+<body class="bg-surface font-body-md text-on-background antialiased overflow-y-scroll">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] font-['Plus_Jakarta_Sans'] antialiased">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+        <!-- Logo (Kiri) -->
+        <div class="w-1/4">
+            <a href="index.html" class="text-2xl font-black text-red-600 tracking-tighter">MSG</a>
+        </div>
+        
+        <!-- Links (Tengah) -->
+        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8">
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="index.html">Beranda</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="about.html">Tentang Kami</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="business.html">Unit Bisnis</a>
+            <a class="font-semibold text-red-600 border-b-2 border-red-600 pb-1" href="gallery.html">Galeri</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="news-detail.html">Berita</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="contact.html">Kontak</a>
+        </div>
+
+        <!-- Tombol Hubungi Kami (Kanan) -->
+        <div class="hidden md:flex w-1/4 justify-end">
+            <button onclick="window.location.href='contact.html'" class="bg-red-600 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-red-700 shadow-sm active:scale-95">Hubungi Kami</button>
+        </div>
+
+        <!-- Tombol Menu Mobile -->
+        <div class="md:hidden flex w-3/4 justify-end">
+            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8">
+                <!-- Menu Icon -->
+                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!-- Close Icon -->
+                <svg id="close-icon" class="absolute inset-0 w-8 h-8 opacity-0 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex flex-col px-6 py-4 space-y-4 pb-6">
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="index.html">Beranda</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="about.html">Tentang Kami</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="business.html">Unit Bisnis</a>
+        <a class="text-red-600 font-semibold" href="gallery.html">Galeri</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="contact.html">Kontak</a>
+        <div class="pt-4 mt-2 border-t border-zinc-100">
+            <button onclick="window.location.href='contact.html'" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-red-700">Hubungi Kami</button>
+        </div>
+    </div>
+</nav>
+<main class="pt-32 pb-xl">
+<!-- Hero Header -->
+<section class="max-w-7xl mx-auto px-6 mb-md">
+<div class="max-w-3xl">
+<span class="text-primary font-label-sm uppercase tracking-widest mb-base block">Our Documentation</span>
+<h1 class="font-h1 text-h1 text-on-background mb-sm">Visual Journey of Excellence</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-lg">Capturing moments of innovation, community impact, and the operational excellence of PT. Mari Sukses Gemilang across our diverse business units.</p>
+</div>
+<!-- Filter Controls -->
+<div class="flex flex-wrap gap-base border-b border-zinc-200 pb-6" id="filter-container">
+<button data-filter="all" class="filter-btn px-6 py-2 bg-red-600 text-white rounded-full font-medium transition-colors shadow-sm">Semua Works</button>
+<button data-filter="corporate" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">Corporate Acara</button>
+<button data-filter="facilities" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">Facilities</button>
+<button data-filter="unit" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">Unit Activities</button>
+<button data-filter="sustainability" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">Sustainability</button>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+<!-- Gallery Item 1 -->
+<div data-category="facilities" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern corporate glass skyscraper reflecting a clear blue sky, emphasizing transparency and modern architectural design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGS9iXGzZVtZhqESVJCGFVuuP0a4Vq_DoDod28yVvl87PPGjwu8RtQnMQYriatGXUUct9nuswaOI-wSzRVx1jOF8ArTVjByno7wSDyuAGaJc5ooRdZx0lmC9WZwHIEKhrLkCYyz61dghO9s09dDcf9FOIvX3_roziLNjzcsUBk67U7t_NibiYnK62AfghEEh1TC6mzx4RkHDIuPZIwwfW6Y48qeE8VWe0ZnGzlc4i0UWcoj1HBInXuQ69er0pFqH15QaZUMI5zhRLt"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Facilities</span>
+<h4 class="font-h4 text-h4 text-on-background">HQ Headquarters</h4>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div data-category="corporate" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Professional business team collaborating around a modern conference table with digital tablets and bright natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj5R01URJbKv5paKpFwkFzjPzspeWLKDQH4OBXsXD5GvBsI3YphdIkJUWU-KvmX1TO4rOHSl-4tIjjubynwtfU1_deHeIs1AqRpYbpvoNC-boHnqrdfq68HODp_LMpKX3B8MOg4CGLmhhZzbWlkMrbfHIrJ59iLFEHMlBfCIc0Som5LGed0idPMlINK29-IkwNNu3hsCSwCEJ927OphBGar3XK5wbHIkjYhNGoh1umlRalGAik4dZp0HVyfSW0Hka7Aph1j6efohNZ"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Corporate Acara</span>
+<h4 class="font-h4 text-h4 text-on-background">Annual Strategic Forum</h4>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div data-category="unit" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<div class="relative">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Industrial technician in safety gear inspecting high-tech machinery in a clean, modern manufacturing facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCY9HO72wqznAcmZphnJSPMJDQUKeuviG5Tl6y2nGika9Z8Ari4YF3lifk9I-k2lFilKlXccAqd1GRTqdyJHTh0X0phR_P7XDgy6Ssx0JFaPUBBfldmFg6zm_WSAckgQwjm3m28tUSFTe1bk-OthGxIzbEYkpFsBD0aNJ-l9AZDJsaFEM0h78wCsZF8rFunDY0dvaX_WoplWK6Ebq0rGI_WsEe03cRn3s6gVymqHoQTVVx7gpubcc5qm9qLAH_MYG6Az-uGeLNpFoU"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
+<span class="material-symbols-outlined text-white text-5xl opacity-80 group-hover:opacity-100 transition-opacity">play_circle</span>
+</div>
+</div>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Unit Activities</span>
+<h4 class="font-h4 text-h4 text-on-background">Operational Excellence 2024</h4>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div data-category="corporate" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Diverse group of smiling employees engaged in a team building workshop in a bright loft office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChKsqDR_5-LvwCKnLcQaBJcB_tEfBF1JDtmW1ryoKpp5mjlLKpxQWh_lLId8GSOmj5o_1ZCR5hzIq8aEQuXusnl9VjEnOheasreO8HzQ5xtWLbqYihgg41KpcISWN-mDU_MHuK2-055G_l2tXeWMvOMZnkzCux8DjvpVmIEsnPuCoWboDA-c4y_hOXmr0qNMoTmfnEni-tJtLUKnIxTVG0Y1vqNWxoIF8rFjId24-7J1U6BNkK3nX3RYzoSyqSwKH5YC2Qbb-ovhcY"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Corporate Acara</span>
+<h4 class="font-h4 text-h4 text-on-background">Team Synergy Workshop</h4>
+</div>
+</div>
+<!-- Gallery Item 5 -->
+<div data-category="facilities" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist office reception area with premium wood paneling and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqoV55mawuh35u0dnWWHmhvy8kMyr4_-YTQAGal_oc3v6Le5yQ_uA13KPIZLuryAIg98i4np4N4fQjOPGKzUmZu1hAZUJYWQxQKQQ4vTrxpTCHiXTPobOqCL3xI2agMnno4_V8R43aPQa-NoRnDZwWENWs0xx1ssztQl2F8-cdHTX3lkyinwql5e_J190Sgin2CVBl3al9Ez7c1OH0Df_J1rQOfttcHWMvuSPPZF0ONFYWwhHAjUeyTwT4-FYfabB2r4CxpEx_Dcgq"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Facilities</span>
+<h4 class="font-h4 text-h4 text-on-background">Branch Office Jakarta</h4>
+</div>
+</div>
+<!-- Gallery Item 6 -->
+<div data-category="sustainability" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Clean expansive warehouse space with orderly logistics systems and bright overhead LED lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbdGGWTgg-2fe0wkeoylSqtc_WpqkKBsT02ibplPat94brGMNU4xz2fZaj_7vrztdOb7xV7x3v6aIy91zDEQm8dCaJEZ7Dxnb5Vtv4Tc6USEB7gCcwvriE8q2st6dBGte-t-hgHigvKAqBbbe53OdJ2PJn1ZmPzNAKOGEER-VhUQhXly-DHQnQSMR0NuCxhYO8EPL5ArNQY93ZzYdVvObEM8b3jqNcDOP8wzOt1FNtLSTl8O0eZ48HTtc0ao0wlcn_uLfiIwnl2nh4"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Unit Activities</span>
+<h4 class="font-h4 text-h4 text-on-background">Logistics Hub Tour</h4>
+</div>
+</div>
+<!-- Gallery Item 7 -->
+<div data-category="corporate" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Corporate gala dinner setup with elegant lighting and refined table settings for an awards night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBq5pybuq46MhrvXSoFMrNk1rYP69kqtEs0vEk_NTFXUHE0G-qadLLPx1YfJLMBj7JmAuu7WhReCfj3SqRDcCSzPQsn02iDTmmQlUNrGL4wbQBUbkixbe4IYSMP9CtSdE-KX3X-Ya6Vn5mxX2gXeeGcwt2Oo4c8gzmCOTKYxtjTUGvAgrwlQQiARMU9JQKrIdjcetFFs4fgd-4sLrJyAuXPdSpde4TyN2rDOa3F71dgAFuYqopIQINmOpHlrjZIe90IqarRnWEh-hU"/>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Corporate Acara</span>
+<h4 class="font-h4 text-h4 text-on-background">Annual Gala Night</h4>
+</div>
+</div>
+<!-- Gallery Item 8 -->
+<div data-category="unit" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
+<div class="relative">
+<img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Drone shot of a modern industrial complex at sunset with dramatic orange and purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOB3GK5Y2a0sEMq1-WA_huHb5oBXcx2LFLMMAqTXq2FCQwfgG21Ne2ugCnDsPCjGVmQFfsW6oBYXmUcdjATvprAojer6WsM-0YEKzi9xDSoMMtrzcMQP-yumB5-dew1H_zzGTXqN3v4e8ydTC8A78EU0QHVnBoYX9R3IFIBrLwZIrhBRyoFOZcRSYkhR6TC0aoHdqUs8TR7qKxfc_8xJhzZrwnt_ydTxU7X6XSi3OFdR6_G9f9UL6n3X3T6WxsG0UJJlTZrlXrFCN"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
+<span class="material-symbols-outlined text-white text-5xl opacity-80 group-hover:opacity-100 transition-opacity">play_circle</span>
+</div>
+</div>
+<div class="p-md">
+<span class="text-primary font-label-sm block mb-xs">Unit Activities</span>
+<h4 class="font-h4 text-h4 text-on-background">Industrial Showcase</h4>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-xl flex justify-center">
+<button class="group flex items-center gap-base px-8 py-4 bg-white border border-zinc-200 rounded-lg font-label-sm text-on-background hover:bg-zinc-50 transition-all">
+                    Load More Moments
+                    <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Stats Callout -->
+<section class="max-w-7xl mx-auto px-6 mt-xl">
+<div class="bg-primary-container rounded-xl p-xl flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="text-center md:text-left">
+<h2 class="font-h2 text-h2 text-white mb-sm">Our Presence in Frame</h2>
+<p class="text-white/80 font-body-lg">Documentation from across 15+ years of corporate development and industrial success.</p>
+</div>
+<div class="grid grid-cols-2 gap-lg w-full md:w-auto">
+<div class="text-center">
+<span class="block font-h2 text-h1 text-white">500+</span>
+<span class="text-white/70 font-label-sm uppercase">Acara Captured</span>
+</div>
+<div class="text-center">
+<span class="block font-h2 text-h1 text-white">12</span>
+<span class="text-white/70 font-label-sm uppercase">Unit Facilities</span>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm hidden items-center justify-center opacity-0 transition-opacity duration-300">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-2 rounded-full">
+        <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+</div>
+</main>
+<!-- Standardized Footer -->
+<footer class="w-full border-t border-zinc-100 bg-zinc-950 font-['Plus_Jakarta_Sans'] text-sm text-zinc-400">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+            <div class="text-xl font-black text-red-600">MSG</div>
+            <p class="text-zinc-500 leading-relaxed">PT. Mari Sukses Gemilang is a leading multi-sector corporation committed to excellence and sustainable innovation in Indonesia.</p>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Tautan Cepat</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-zinc-500 hover:text-white transition-all" href="index.html">Beranda</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="about.html">Tentang Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="business.html">Unit Bisnis</a>
+                <a class="text-red-500 font-semibold" href="gallery.html">Galeri</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Dukungan</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-zinc-500 hover:text-white transition-all" href="news-detail.html">Berita</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="contact.html">Hubungi Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Kebijakan Privasi</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Syarat & Ketentuan</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Ikuti Kami</h4>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">link</span></a>
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">public</span></a>
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">mail</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-8 border-t border-zinc-900 text-center text-zinc-600">
+        © 2024 PT. Mari Sukses Gemilang. Semua rights reserved.
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 800, once: true});</script>
+<script src="src/main.js"></script>
+</body>
+</html>

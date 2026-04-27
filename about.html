@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="scroll-smooth scroll-pt-20 md:scroll-pt-[136px]" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="css/output.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .goto-mask {
+            border-radius: 0 50% 50% 0;
+            clip-path: ellipse(110% 100% at 0% 50%);
+        }
+        @media (max-width: 768px) {
+            .goto-mask {
+                border-radius: 0 0 50% 50%;
+                clip-path: ellipse(100% 100% at 50% 0%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body-md antialiased overflow-y-scroll">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] font-['Plus_Jakarta_Sans'] antialiased">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+        <!-- Logo (Kiri) -->
+        <div class="w-1/4">
+            <a href="index.html" class="text-2xl font-black text-red-600 tracking-tighter">MSG</a>
+        </div>
+        
+        <!-- Links (Tengah) -->
+        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8">
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="index.html">Beranda</a>
+            <a class="font-semibold text-red-600 border-b-2 border-red-600 pb-1" href="about.html">Tentang Kami</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="business.html">Unit Bisnis</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="gallery.html">Galeri</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="news-detail.html">Berita</a>
+            <a class="font-semibold text-zinc-600 border-b-2 border-transparent hover:text-red-600 pb-1" href="contact.html">Kontak</a>
+        </div>
+
+        <!-- Tombol Hubungi Kami (Kanan) -->
+        <div class="hidden md:flex w-1/4 justify-end">
+            <button onclick="window.location.href='contact.html'" class="bg-red-600 text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-red-700 shadow-sm active:scale-95">Hubungi Kami</button>
+        </div>
+
+        <!-- Tombol Menu Mobile -->
+        <div class="md:hidden flex w-3/4 justify-end">
+            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8">
+                <!-- Menu Icon -->
+                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!-- Close Icon -->
+                <svg id="close-icon" class="absolute inset-0 w-8 h-8 opacity-0 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex flex-col px-6 py-4 space-y-4 pb-6">
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="index.html">Beranda</a>
+        <a class="text-red-600 font-semibold" href="about.html">Tentang Kami</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="business.html">Unit Bisnis</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="gallery.html">Galeri</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="contact.html">Kontak</a>
+        <div class="pt-4 mt-2 border-t border-zinc-100">
+            <button onclick="window.location.href='contact.html'" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-red-700">Hubungi Kami</button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Sticky Sub-Navigation -->
+    <div class="fixed top-20 w-full z-40 bg-white/90 backdrop-blur-md border-b border-zinc-100 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 flex items-center space-x-8 h-14">
+            <a href="#cerita" class="text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Cerita Kami</a>
+            <a href="#visi-misi" class="text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Visi & Misi</a>
+            <a href="#nilai" class="text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Nilai Utama</a>
+            <a href="#kepemimpinan" class="text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Kepemimpinan</a>
+            <a href="#perjalanan" class="text-sm font-semibold text-zinc-600 hover:text-red-600 transition-colors">Perjalanan Kami</a>
+        </div>
+    </div>
+
+    <!-- Hero Section (Cerita Kami) - GoTo Style 50/50 -->
+    <section id="cerita" class="pt-40 pb-20 overflow-hidden bg-surface">
+        <div class="grid md:grid-cols-2 h-full w-full gap-8 md:gap-0">
+            <!-- Left Image with Organic Mask -->
+            <div class="relative h-[400px] md:h-full min-h-[500px] w-full" data-aos="fade-right" data-aos-duration="1000">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgOfF-lFIhX4aOGtRShZZD5KQTbW4HzUVmNLT07v-gFaOgRpKFt4oc2NV9h0t1YkrjDV1R4FUIFXGRimAOgvK2vjAC2McbsRzQMEjT7mHXy1A53hFweJhiHaESd7nxk4gg281Gj76-ULFT10w0MFltj4goQX4kz_13Szj70ElW9sDwcIv7TENGsHDY1xDJmVpMiukdKCYg1KUobGVhlrVyEUoA1BfbgQeTJrWOlUjRz6V39uqHjKyfb3lA6PKomD-U7akHRl3URJpg" alt="MSG Headquarters" class="w-full h-full object-cover goto-mask md:scale-105 transform origin-left md:absolute md:inset-0">
+            </div>
+            <!-- Right Content -->
+            <div class="flex flex-col justify-center px-8 md:px-16 py-16 md:pt-32 md:pb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <span class="text-red-600 font-bold uppercase tracking-widest text-sm mb-4">Warisan Keunggulan</span>
+                <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] mb-8 text-zinc-900 tracking-tight">Mendorong Inovasi,<br>Membangun Masa Depan.</h1>
+                <div class="text-zinc-600 text-lg leading-relaxed space-y-6 max-w-xl">
+                    <p>PT. Mari Sukses Gemilang (MSG) didirikan dengan prinsip integritas dan pemikiran maju. Kami telah berkembang menjadi perusahaan besar multi-sektor yang berdedikasi menciptakan nilai jangka panjang.</p>
+                    <p>Kami percaya kesuksesan sejati lahir dari perpaduan nilai profesionalisme dan kecerdasan teknologi modern. Dari infrastruktur hingga layanan keuangan digital, setiap langkah kami diukur untuk memberikan dampak positif bagi ekonomi Indonesia.</p>
+                </div>
+                <div class="mt-12 flex items-center gap-6">
+                    <a href="#perjalanan" class="inline-block border-2 border-red-600 text-red-600 font-bold py-3 px-8 rounded-full hover:bg-red-600 hover:text-white transition-all active:scale-95">Jelajahi Sejarah Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi & Misi Section -->
+    <section id="visi-misi" class="py-32 bg-zinc-50 border-t border-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Title Col -->
+                <div class="w-full lg:w-1/3" data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-zinc-900 mb-6">Tujuan Besar Kami</h2>
+                    <p class="text-zinc-600 leading-relaxed text-lg">Membimbing setiap keputusan strategis untuk memastikan kami terus menjadi mitra terpercaya dalam kemajuan industri.</p>
+                </div>
+                <!-- Content Col -->
+                <div class="w-full lg:w-2/3 grid md:grid-cols-2 gap-10">
+                    <div class="bg-white p-10 rounded-3xl border border-zinc-200 hover:border-red-600/50 transition-colors shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <span class="material-symbols-outlined text-red-600 text-5xl mb-8 font-light" style="font-variation-settings: 'wght' 200">visibility</span>
+                        <h3 class="text-2xl font-bold text-zinc-900 mb-4">Visi Kami</h3>
+                        <p class="text-zinc-600 leading-relaxed">Menjadi grup korporat terkemuka di Asia Tenggara, diakui karena portofolio kami yang beragam, integrasi teknologi, dan komitmen tak tergoyahkan pada pembangunan berkelanjutan.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-zinc-200 hover:border-red-600/50 transition-colors shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <span class="material-symbols-outlined text-red-600 text-5xl mb-8 font-light" style="font-variation-settings: 'wght' 200">rocket_launch</span>
+                        <h3 class="text-2xl font-bold text-zinc-900 mb-4">Misi Kami</h3>
+                        <ul class="space-y-4 text-zinc-600">
+                            <li class="flex gap-3 items-start"><span class="text-red-600 mt-1">•</span> Memberikan layanan berkualitas unggul.</li>
+                            <li class="flex gap-3 items-start"><span class="text-red-600 mt-1">•</span> Membina budaya inovasi operasional.</li>
+                            <li class="flex gap-3 items-start"><span class="text-red-600 mt-1">•</span> Membangun hubungan mutual dengan pemangku kepentingan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section (Minimalist Grid) -->
+    <section id="nilai" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-zinc-900 mb-16 text-center" data-aos="fade-up">Nilai-Nilai Utama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-zinc-700 group-hover:text-white transition-colors text-2xl font-light">verified_user</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3">Integritas</h4>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Kami menjunjung standar etika tertinggi, membangun kepercayaan melalui transparansi.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-zinc-700 group-hover:text-white transition-colors text-2xl font-light">military_tech</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3">Keunggulan</h4>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Berusaha untuk kesempurnaan, terus meningkatkan proses dan layanan kami.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-zinc-700 group-hover:text-white transition-colors text-2xl font-light">lightbulb</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3">Inovasi</h4>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Merangkul perubahan dan secara aktif mencari metodologi baru untuk tetap terdepan.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-zinc-700 group-hover:text-white transition-colors text-2xl font-light">eco</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 mb-3">Keberlanjutan</h4>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Meminimalkan dampak lingkungan dan memaksimalkan kontribusi sosial positif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kepemimpinan Kami Section (Leadership Grid) -->
+    <section id="kepemimpinan" class="py-32 bg-zinc-50 border-t border-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-zinc-900 mb-4 text-center" data-aos="fade-up">Dewan Direksi</h2>
+            <p class="text-zinc-600 text-lg text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Pemimpin berpengalaman yang mengarahkan visi dan strategi PT. Mari Sukses Gemilang menuju masa depan yang inovatif.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <!-- Direktur 1 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=500" alt="Budi Santoso" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 group-hover:text-red-600 transition-colors">Budi Santoso</h4>
+                    <p class="text-zinc-600 text-sm">President Director (CEO)</p>
+                </div>
+                <!-- Direktur 2 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=500" alt="Siti Rahmawati" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 group-hover:text-red-600 transition-colors">Siti Rahmawati</h4>
+                    <p class="text-zinc-600 text-sm">Chief Financial Officer (CFO)</p>
+                </div>
+                <!-- Direktur 3 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=500" alt="Hendra Wijaya" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 group-hover:text-red-600 transition-colors">Hendra Wijaya</h4>
+                    <p class="text-zinc-600 text-sm">Chief Operating Officer (COO)</p>
+                </div>
+                <!-- Direktur 4 -->
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=500" alt="Anita Setiawan" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-900 group-hover:text-red-600 transition-colors">Anita Setiawan</h4>
+                    <p class="text-zinc-600 text-sm">Chief Marketing Officer (CMO)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perjalanan Kami (Timeline) - Sudden Light Theme transition -->
+    <section id="perjalanan" class="py-32 bg-white border-t border-zinc-100 text-zinc-900 rounded-t-[3rem] -mt-8 relative z-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Perjalanan Strategis Kami</h2>
+                <p class="text-zinc-500 text-lg">Linimasa tonggak sejarah yang telah mendefinisikan lintasan pertumbuhan MSG.</p>
+            </div>
+
+            <!-- Timeline List -->
+            <div class="space-y-16">
+                <!-- Item 1 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start group" data-aos="fade-up">
+                    <div class="w-full md:w-1/4 text-red-600 font-bold text-3xl pt-1">2009</div>
+                    <div class="w-full md:w-3/4 pb-12 border-b border-zinc-200 group-last:border-0 relative">
+                        <div class="absolute -left-12 md:-left-16 top-3 w-3 h-3 rounded-full bg-red-600 ring-8 ring-white hidden md:block"></div>
+                        <h3 class="text-2xl font-bold mb-4 text-zinc-900">Fondasi Pendirian</h3>
+                        <p class="text-zinc-600 leading-relaxed mb-6">PT. Mari Sukses Gemilang didirikan dengan fokus awal pada pengembangan infrastruktur inti dan layanan perdagangan korporat di Jakarta.</p>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwLzB_nSMUutYvF7ZFswxNOtqmXphRVVrqR5p7WX3GpOkbq9ULsu1j8bX_PCDal4ux6No42sAK_3O0UrvnYoWE4j4skYQlvD61HIepoR47N68uDyoEPDN9uV0d5kUl_JNfiAIbBNi6W2Lx_xbvmKztqyDUE7Ghb5UsXy39FjJDeG9ROVTEs68SSXG40GahHhQEvfzIgVPFkar8OcygmaC1sN5tDm4GfDF51tQzc1gOl606RK5pYcJli54qJyTdybUqX4w3syRrt2tE" alt="2009 Journey" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start group" data-aos="fade-up">
+                    <div class="w-full md:w-1/4 text-red-600 font-bold text-3xl pt-1">2015</div>
+                    <div class="w-full md:w-3/4 pb-12 border-b border-zinc-200 group-last:border-0 relative">
+                        <div class="absolute -left-12 md:-left-16 top-3 w-3 h-3 rounded-full bg-red-600 ring-8 ring-white hidden md:block"></div>
+                        <h3 class="text-2xl font-bold mb-4 text-zinc-900">Ekspansi Regional & Diversifikasi</h3>
+                        <p class="text-zinc-600 leading-relaxed mb-6">Memperluas jangkauan operasi ke bidang logistik terpadu dan konsultan strategis, mengukuhkan kehadiran di tingkat nasional.</p>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgZk7vF2cNelxlZHhqj0rraSuYuY67wy0t4mC03K4WUcO3yXgcG1X2NHn2FJhnKs1jtb7-1XqqdiyJIaeub9qmdMYMWp5AD9Hc0owYjYS-Lal3_HbbZ23hFYsMkHZs2SdHFBQSF_GSuHJd5HxwxZbKw8cKAV0fQdvg2437sH1tghvD5nuqp3AMtvJzGJnClX86zcU0K6PVxsGdZBX7I5Mjbg1R-2_yFNEch48Sk0Wk_EBgNmt0Cas5Xfimd-exbnZqR_7VZtNL2Nvf" alt="2015 Expansion" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start group" data-aos="fade-up">
+                    <div class="w-full md:w-1/4 text-red-600 font-bold text-3xl pt-1">2020</div>
+                    <div class="w-full md:w-3/4 pb-12 border-b border-zinc-200 group-last:border-0 relative">
+                        <div class="absolute -left-12 md:-left-16 top-3 w-3 h-3 rounded-full bg-red-600 ring-8 ring-white hidden md:block"></div>
+                        <h3 class="text-2xl font-bold mb-4 text-zinc-900">Lompatan Finansial & Teknologi</h3>
+                        <p class="text-zinc-600 leading-relaxed mb-6">Peluncuran inisiatif MSG Digital Finance, mengintegrasikan analitik data AI dan solusi fintech modern ke dalam ekosistem korporat.</p>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKGhvwS-YqZebxYtobS8-T4dGzfvE7Dgt70aN-BsKRABgZrHbLrAas_yqS9XiopvvYfHEXmRagoXpdEKlkTxjmMzoaBgIe_j1i4WLizp1mlBtzL0YhCamzzLTqzPT0DY8Cf3Hg5Uq0-qfn_6RjdzgHMcwCCvwO0eQReuVxGRq4d4fiXpiAUeHHkKerlMOWjKFaSpsa_22BqIdlvHdLqk2g8c6XoHk-xqVwZBplA0E-wzwY496bVhTWWifCS-jstL7GRWsPR8OMO-t-" alt="2020 Digital" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start group" data-aos="fade-up">
+                    <div class="w-full md:w-1/4 text-red-600 font-bold text-3xl pt-1">2024</div>
+                    <div class="w-full md:w-3/4 pb-12 border-b border-zinc-200 group-last:border-0 relative">
+                        <div class="absolute -left-12 md:-left-16 top-3 w-3 h-3 rounded-full bg-red-600 ring-8 ring-white hidden md:block"></div>
+                        <h3 class="text-2xl font-bold mb-4 text-zinc-900">Inisiatif Hijau & Masa Depan</h3>
+                        <p class="text-zinc-600 leading-relaxed mb-6">Memulai MSG Energi Masa Depan, mempertegas komitmen penuh pada energi terbarukan dan kepatuhan standar lingkungan global.</p>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYYkWvdlgVhzt9DPaNnxpm4woWiDhWhT9DrHNz0YXOs348ujL8gR_IBZfIQ4zqo3Pzl-wyz2iWgweAc8UHYR3zahkv4L9AT2J79AlWFPb3gvU1jFWpfaBxk9oWI9ebGFQXtsR49NwmP1waqnTG48MdZeF_xPKL6qBkbJiyQBEFvn51FRlhsJPCGG46Yq3ZTcZxtPQJm4AOF-tn4W871QOUsLU7CcJNi79t6TahZ3jZngxUZWSEuJOutG6Q1LLd1A_0wn6jn5YGLDy6" alt="2024 Green" class="w-full h-64 md:h-80 object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Standardized Footer -->
+<footer class="w-full border-t border-zinc-100 bg-zinc-950 font-['Plus_Jakarta_Sans'] text-sm text-zinc-400">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+            <div class="text-xl font-black text-red-600">MSG</div>
+            <p class="text-zinc-500 leading-relaxed">PT. Mari Sukses Gemilang is a leading multi-sector corporation committed to excellence and sustainable innovation in Indonesia.</p>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Tautan Cepat</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-zinc-500 hover:text-white transition-all" href="index.html">Beranda</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="about.html">Tentang Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="business.html">Unit Bisnis</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="gallery.html">Galeri</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Dukungan</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-zinc-500 hover:text-white transition-all" href="news-detail.html">Berita</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="contact.html">Hubungi Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Kebijakan Privasi</a>
+                <a class="text-zinc-500 hover:text-white transition-all" href="javascript:void(0)">Syarat & Ketentuan</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-bold text-white mb-4">Ikuti Kami</h4>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">link</span></a>
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">public</span></a>
+                <a class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">mail</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-8 border-t border-zinc-900 text-center text-zinc-600">
+        © 2024 PT. Mari Sukses Gemilang. Semua rights reserved.
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 800, once: true});</script>
+<script src="src/main.js"></script>
+</body>
+</html>

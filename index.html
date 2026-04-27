@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="stylesheet" href="css/output.css"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-y-scroll">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 font-sans antialiased">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+        <!-- Logo (Kiri) -->
+        <div class="w-1/4">
+            <a href="index.html" class="text-2xl font-heading font-black text-[#D90429] tracking-tighter">MSG</a>
+        </div>
+        
+        <!-- Links (Tengah) -->
+        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8 text-sm">
+            <a class="font-medium text-[#D90429]" href="index.html">Beranda</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="business.html">Unit Bisnis</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
+            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="contact.html">Kontak</a>
+        </div>
+
+        <!-- Tombol Hubungi Kami (Kanan) -->
+        <div class="hidden md:flex w-1/4 justify-end">
+            <button onclick="window.location.href='contact.html'" class="bg-zinc-900 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-black transition-colors">Hubungi Kami</button>
+        </div>
+
+        <!-- Tombol Menu Mobile -->
+        <div class="md:hidden flex w-3/4 justify-end">
+            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8">
+                <!-- Menu Icon -->
+                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!-- Close Icon -->
+                <svg id="close-icon" class="absolute inset-0 w-8 h-8 opacity-0 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex flex-col px-6 py-4 space-y-4 pb-6">
+        <a class="text-red-600 font-semibold" href="index.html">Beranda</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="about.html">Tentang Kami</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="business.html">Unit Bisnis</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="gallery.html">Galeri</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-semibold hover:text-red-600" href="contact.html">Kontak</a>
+        <div class="pt-4 mt-2 border-t border-zinc-100">
+            <button onclick="window.location.href='contact.html'" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-red-700">Hubungi Kami</button>
+        </div>
+    </div>
+</nav>
+<!-- Premium Hero Section -->
+<section class="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden bg-[#FAFAFA] min-h-[90vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 lg:gap-12 items-center relative z-10">
+        <!-- Text Content -->
+        <div class="lg:col-span-6" data-aos="fade-right" data-aos-duration="1000">
+            <span class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-zinc-200 text-zinc-600 font-medium text-xs tracking-widest uppercase mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#D90429] animate-pulse"></span>
+                PT. Mari Sukses Gemilang
+            </span>
+            <h1 class="font-heading text-5xl lg:text-6xl xl:text-[4.5rem] text-zinc-900 mb-8 leading-[1.05] tracking-tight font-bold">
+                Mendorong Inovasi,<br/>Membangun Kesuksesan.
+            </h1>
+            <p class="text-lg lg:text-xl text-zinc-500 mb-12 max-w-lg leading-relaxed">
+                Memberdayakan bisnis di seluruh Indonesia dengan keunggulan strategis dan solusi pertumbuhan berkelanjutan melalui ekosistem unit bisnis kami.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="window.location.href='business.html'" class="bg-[#D90429] hover:bg-[#B00020] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex justify-center items-center gap-2">
+                    Jelajahi Bisnis Kami <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <button onclick="window.location.href='about.html'" class="bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-900 hover:border-zinc-300 px-8 py-4 rounded-full font-medium transition-all duration-300 text-center">
+                    Lihat Profil
+                </button>
+            </div>
+        </div>
+
+        <!-- Image & Floating Stats Container -->
+        <div class="lg:col-span-6 relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <!-- Main Image Wrapper with clean borders -->
+            <div class="relative rounded-2xl overflow-hidden bg-zinc-100 aspect-[4/5] md:aspect-square lg:aspect-[4/5] transform hover:-translate-y-1 transition-transform duration-700">
+                <img class="w-full h-full object-cover" data-alt="Modern corporate glass skyscraper reflecting bright blue sky with sharp architectural lines and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBecMPD_Xp3vDclYP6Iy8ctBe_TXzmz2xZpJlKocFCPwUBk14Mtl2mu4GreAceeI1e1jRR2ZVzLK4hPfIuEIoYJgezTHvHkmyG_5O0qQpVPRN_PSlEoN6ykcLPhe_vrBU3HYSb9JKSJPZhWkRGA4amtyNu44kQUsv97wZO-Uv8DdOuQUqnJRxCTLzbg1dIG5zKxQpnCi_svipA4j827rbcovuynh7Cw8-MHseZNdxynu01_UnNwHUhIdFjl2XIh23v-j7PDTsWryaLj"/>
+            </div>
+
+            <!-- Floating Clean Card -->
+            <div class="absolute -left-4 md:-left-8 top-24 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#D90429]/10 flex items-center justify-center text-[#D90429]">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-heading font-bold text-zinc-900 leading-none mb-1">15+</div>
+                        <div class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Tahun Pengalaman</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Clean Card 2: Projects -->
+            <div class="absolute -right-4 md:-right-8 bottom-32 bg-white/90 backdrop-blur-md border border-zinc-100 p-6 rounded-2xl shadow-xl">
+                <div class="flex items-center gap-4">
+                    <div>
+                        <div class="text-2xl font-heading font-bold text-zinc-900 leading-none mb-1">500+</div>
+                        <div class="text-xs font-medium text-zinc-500 uppercase tracking-wider text-right">Proyek Sukses</div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center text-white shadow-md">
+                        <span class="material-symbols-outlined">domain_verification</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Clean Card 3: Success Rate -->
+            <div class="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-white px-8 py-5 rounded-full flex items-center gap-4 shadow-xl z-20 border border-zinc-100">
+                <div class="flex -space-x-3">
+                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=A&background=random" alt="Avatar">
+                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=B&background=random" alt="Avatar">
+                    <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://ui-avatars.com/api/?name=C&background=random" alt="Avatar">
+                </div>
+                <div class="w-px h-10 bg-zinc-200 mx-2"></div>
+                <div>
+                    <div class="text-sm font-heading font-bold text-zinc-900">98% Success Rate</div>
+                    <div class="text-[10px] text-zinc-500 uppercase font-medium tracking-wider">Klien Korporat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About MSG Section -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1" data-aos="fade-up">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="rounded-2xl w-full h-48 object-cover shadow-md" data-alt="Professional team in a collaborative meeting environment around a clean white desk in a sunlit modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9aF7eUKHaLuLUfzoGRTzvYo_PDZiElj6WWvTN3n44QOH762rqqvDE56Ap-FsPpEwqIXj4zgPh_8AHl5gnBLy2gG51eHM6fy2dY6ojOqNM5tGwllV4nECzxU1o0wkkxnwQQgnOWiUu2lwZYok0yKf--HuxzjsEYxVPtel-TqolYQcYW_7NKYbb1h_agX_fxr5navcHB9GG_jcPeoeCqjGC2Nv2I9_g9NCuGBqHNYxeSCH-Fizq2EJzP_8OgdwjgHa62Cqaql2rtc4W"/>
+<img class="rounded-2xl w-full h-64 object-cover shadow-md" data-alt="Diverse group of business professionals standing together in a corporate lobby smiling and looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4H723z1kTZERQ1p9qkja1DayDZfg3Dz28IVpOOqflEjN5EGvqXSbmNRaVAqHvaSqhOZFSRIYd11Bfm-1R1x9IGXDsBOK_5liceyG1bYydNW26MftFefkRUxtCeBbfpwQZShZlHnPFtEdeUKqMPBgDqh5_kLZv6aHYBKrX0OZtDwhEv9cDqjgHgSVPEM483G99EbUO9RJ7BsX2JmO8DATlk2BTGuq-TS3xDUQo7PwxuWE7v9flqqgkMB4Q4uPWfrziVyBRqq2aBDws"/>
+</div>
+<div class="space-y-4 pt-8">
+<img class="rounded-2xl w-full h-64 object-cover shadow-md" data-alt="Minimalist office lounge with premium furniture and large windows overlooking a city skyline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_OLhTE5FweGAtKdd32aEWlNYqfZPetGgqlSoFRkbcnueUl893KMInauY9z20t-d1jBt12E9-qt606ibwJr8lZ6RJmaUIVpT6adnIQaEjGtLAo58_0I7dCk-xUhOPWFmj9NtN7NZ_wKhw5Crn_zb9crPDVrLB-8LxhkNO5ptyGVBc8ZILIfG_2yZ7ND-4LdgTYF58_FvUvXY9yPyfv37TQxE26Et59sl0rGMtzHEw6wIsqkJkgL0jx4nK-qvlqkHH8TOjQ4lmjwGGp"/>
+<img class="rounded-2xl w-full h-48 object-cover shadow-md" data-alt="Close up of a professional handshake in a formal setting symbolizing a successful business agreement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxv6Eps30JwRW53lPnnO9OfeRp_cTNzamt5K2Mqwf_M1Qj1444Q3i2lG0mo0SVO8sPOPDmxHGCKG3mR4pfqS2Wik6M4iAEhpyIj538U837AJl7BnYH9tZIVuQ1yTeovUY9RReV5_b-1MK0qEc9ViJV1HvFWM42S53GUlReFJ684mTACR2ikqOUCG6A9m3Ap_TMlaEw1LAfm479eJrrGTBbw5EzTWzturG6Y3G6XU1xRq5NGvDhm_JhufMZqs4XDuyMzsLrGGGmtA7_"/>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2" data-aos="fade-left">
+<span class="text-[#D90429] font-bold tracking-widest text-xs uppercase mb-4 block">Tentang Kami</span>
+<h2 class="font-heading font-bold text-4xl lg:text-5xl mb-6 text-zinc-900 leading-[1.1]">Dibangun atas Integritas dan Pemikiran Maju.</h2>
+<p class="text-lg text-zinc-500 mb-10 leading-relaxed">
+                        PT. Mari Sukses Gemilang (MSG) adalah entitas korporat multi-sektor yang berdedikasi menciptakan nilai jangka panjang. Kami percaya kesuksesan sejati lahir dari perpaduan nilai profesionalisme dan kecerdasan teknologi modern.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-5">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#D90429]/10 text-[#D90429] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
+</div>
+<div>
+<h4 class="font-heading font-bold text-xl mb-2 text-zinc-900">Stabilitas Perusahaan</h4>
+<p class="text-zinc-500 text-sm leading-relaxed">Fondasi yang kokoh dibangun dari puluhan tahun pengalaman memimpin industri.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#D90429]/10 text-[#D90429] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">nature_people</span>
+</div>
+<div>
+<h4 class="font-heading font-bold text-xl mb-2 text-zinc-900">Pertumbuhan Berkelanjutan</h4>
+<p class="text-zinc-500 text-sm leading-relaxed">Investasi strategis yang memprioritaskan dampak ekologis dan sosial.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#D90429]/10 text-[#D90429] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<h4 class="font-heading font-bold text-xl mb-2 text-zinc-900">Berbasis Inovasi</h4>
+<p class="text-zinc-500 text-sm leading-relaxed">Mengadopsi teknologi terbaru untuk memperlancar proses dan memaksimalkan hasil.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Unit Bisnis Section (Bento Style) -->
+<section class="py-24 bg-[#F8F9FA]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16" data-aos="fade-up">
+<span class="text-[#D90429] font-bold tracking-widest text-xs uppercase mb-4 block">Unit Bisnis</span>
+<h2 class="font-heading font-bold text-4xl lg:text-5xl mb-6 text-zinc-900 leading-[1.1]">Ekosistem Bisnis Kami</h2>
+<p class="text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed">Beragam sektor, satu visi. Kami beroperasi di berbagai industri untuk memberikan nilai yang komprehensif.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-8 group relative rounded-3xl overflow-hidden h-[450px]" data-aos="fade-up" data-aos-delay="100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Large scale construction site with cranes and industrial equipment at sunset with warm atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXOYJPUUYEX07x5bBxF_FYtb5b-suvrw06NiKMQ2TqQJD89zAN8gWAlTAMfwZWyE0O0ChUsGdU4fRKEepOeQbsikm8CRllug1iVkr8YLCCeAuC7UFIEs6q4OQOsX_PjhNL33IfXed-9DXsSpxPpKXyF-zhlBftJpjQaYSYy2nPRobUKYSzaPjvUuV6dr69cSyE3herZpPuOh8nX3nXpvVZVJhv4CdLGAtqS2odKtdX2M7wFgnCiFGi7JyBjpbc1_FjwdYOmoEvmTc1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10">
+<span class="text-[#D90429] font-bold mb-3 tracking-wider text-sm uppercase">Infrastructure</span>
+<h3 class="text-white text-3xl font-heading font-bold mb-4">MSG Konstruksi &amp; Properti</h3>
+<p class="text-zinc-300 max-w-md text-base leading-relaxed">Membangun tulang punggung bangsa melalui proyek infrastruktur komersial dan perumahan berkualitas tinggi.</p>
+</div>
+</div>
+<!-- Small Card -->
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden h-[450px]" data-aos="fade-up" data-aos-delay="200">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Two businessmen discussing professional strategy with a digital tablet in a clean white office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpaMwvwY_6vs71FY0aMOLFPNSVEgLj_CEluxvXRBynlNgZBfTra-pTSOxnnktRXRdapsw6ERnEPRa7QXzYPmN_BCvIK7gRF2GFoRVqcpm5i7fHBRCT9Owi03Tg383j3FHCtn0VhQ0zhOaTY1PvVg95O2W_VWFalGWLBJex9bM93Lx6CvRM9hA6TsM_xqrpq83gA38dwEAnqpITfhNqIRoyqhYozCeMkTE-RmL0VelYiJzpuq88vzShGGr4zsjBSN64kNQ0eT4_3LSE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8">
+<span class="text-[#D90429] font-bold mb-3 tracking-wider text-sm uppercase">Consultancy</span>
+<h3 class="text-white text-2xl font-heading font-bold mb-3">MSG Strategic Partners</h3>
+<p class="text-zinc-300 text-base leading-relaxed">Layanan penasihat strategis untuk transformasi bisnis tingkat enterprise.</p>
+</div>
+</div>
+<!-- Three Small Cards -->
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden h-[320px]" data-aos="fade-up" data-aos-delay="300">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic digital banking app interface displayed on a high-end smartphone screen with vibrant red accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4lTtOYoWKwSY5Z7eTOBhT6VsNkwxwrPdXrchvXQC0OV0z-cWeocmLLtkOtqwhTBOle-BQSwzRJxr8Aqz6VWGcL5F13G4617DHsojzY7ecwsgp239DAHj1EhUUaN-KY7XPS7N1K9WWLSfppVEZYral2bgJaycIppdoUiK1KDXdkcXNo2OnIV5Z1SQaVUKAYtGVwks16o0i8BraxTom3YcYOh6qAg7u9d3PbXhRKFlyjO99qZxSu0IXXbqTZU0w4UrVYcpqw4dRWM_7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+<span class="text-[#D90429] font-bold mb-2 text-xs tracking-wider uppercase">Fintech</span>
+<h3 class="text-white font-heading font-bold text-xl">MSG Digital Finance</h3>
+</div>
+</div>
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden h-[320px]" data-aos="fade-up" data-aos-delay="300">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern logistics warehouse with automated sorting systems and organized shipping containers in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVvWWef3H8yX16hHeofwVEC8eV-ccaGY8tdInd2H3JbqYXQnln-bgQDctOn3Zly0lgyeDE3wFz1LkYFOammo4ADiDvdOezW2WGUOcZhdy3Ux8GOoAMTaIuLLKO3rsZQnykYhoaasG9zs-m9ahNoHIxQ41d0T5MQIVh6vB8sV8jIsCHdMBDl7fJJbtm3qVMAPW5qi96kVo9pIRf9s7AgA5rTBVHwf6rLIWghTWNA1qZdNU8BMO6qe9zPDSvetX_OzowoaH5QFaMSoPp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+<span class="text-[#D90429] font-bold mb-2 text-xs tracking-wider uppercase">Logistics</span>
+<h3 class="text-white font-heading font-bold text-xl">MSG Logistik Terpadu</h3>
+</div>
+</div>
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden h-[320px]" data-aos="fade-up" data-aos-delay="300">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Clean tech manufacturing facility with robotics and bright clean white lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPrjGcVZeLFf_RS4_8HIQ8vQp4fi7tEzFDWNfQ6zQSb3Tm4bQIJC2bq0WxW1SEWLrEjEqt6ViUBPNQnvWIMU8zXnpqHPbgfDus70WvHeT86-mZvDnRwsMsPys1MwLdAbiadj5cOCqH8ngYr52jPACjINkZ5SC3F1Ly-SKhJSrh2Px4-JmUb9pmXJK2oraP2i1FXFim5cUTUg9nrvTiwQKT71elGjL3Sf7lSMHbq59pXcTmv3yPeKDINEs_jQbtGxmBWB1-Z3cVy8Oe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+<span class="text-[#D90429] font-bold mb-2 text-xs tracking-wider uppercase">Energy</span>
+<h3 class="text-white font-heading font-bold text-xl">MSG Energi Masa Depan</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Event Section -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6" data-aos="fade-up">
+<div>
+<span class="text-[#D90429] font-bold tracking-widest text-xs uppercase mb-4 block">Berita & Insight</span>
+<h2 class="font-heading font-bold text-4xl text-zinc-900 mb-4">Wawasan Terbaru</h2>
+<p class="text-zinc-500 max-w-xl text-lg">Dapatkan informasi terbaru mengenai pergerakan perusahaan dan laporan industri kami.</p>
+</div>
+<a href="news-detail.html" class="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+                    Lihat Semua Berita <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- News Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+<div class="h-64 overflow-hidden rounded-2xl mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Two businesswomen discussing complex data on a wall-mounted glass board in a modern office conference room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWipIQAx0P1KFTsqUPo3ZdXEp8oRh6G-_D81P-lgqNrDKpJz3moZeEAcBaz3RNYEB5LABGjfBvPhtKGdhskSJSFRe-8zjFFCpkz86poq6cn6gbc7Ehu4_ZgcN1gjziGmvDf69JZAyw0SxtdXCz2Swv7ZHxnFVSiIBxizaqhFwWdI8NYCyPc7aWGerA9sGZTe10N8mF7vWsW5-5PR2AW_gf6efE4C8KenIMSrh4fuS7RUpFFB-9MkpkPWyRdLRS0yZZVpCMIy1SvwkL"/>
+</div>
+<div>
+<div class="flex items-center gap-4 text-xs text-zinc-500 mb-4 font-medium uppercase tracking-wider">
+<span class="text-[#D90429] font-bold">Promo</span>
+<span>May 24, 2024</span>
+</div>
+<h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Annual Business Summit: Transforming the Future of Fintech</h4>
+<p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Join us for a three-day intensive summit featuring world-class speakers and innovative workshops on digital transformation.</p>
+<a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+<div class="h-64 overflow-hidden rounded-2xl mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Top down view of an organized workspace with high-tech gadgets and coffee mug on a clean white desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7MaGEC_P5gJIKUEAY91TTcAlSira-EsbRz3ajn3c92qTtutprJBH8bVLQhehOXtRp4hosv5PnYpShjoCn8SMvvNVYCcD9lwEQkZkdrqwOU1WhZjb-tlPb1OIxy-tFIIzGqESrhuO46wstFh2N7ZRuztsU2MuMSLP0vbRl_ZqNdmoz5mNyhRO6SRXKQvyuNw-dDxyp9-O8xn7TOHkmTfxMyLK82ElhstF7gwg8wEIULTkiD9d-k_V4yKibuZDhuTPNSiGo5T4uDiMs"/>
+</div>
+<div>
+<div class="flex items-center gap-4 text-xs text-zinc-500 mb-4 font-medium uppercase tracking-wider">
+<span class="text-[#D90429] font-bold">Campaign</span>
+<span>May 18, 2024</span>
+</div>
+<h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">Green Initiative 2024: MSG Commits to Net-Zero Construction</h4>
+<p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Launching our new sustainability framework to ensure every square meter we build respects the environment.</p>
+<a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden group cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+<div class="h-64 overflow-hidden rounded-2xl mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Large audience of professionals clapping at a corporate award ceremony with warm stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsgGl9h1frD1m7WcImEQjStrPaJH7SP9x5sjNgwxxNyqlNQKKDXVSBJZAZxhzZYVC4BzB-JSchYk2X1ljdcum2dhbFeoUXVFoQyWp06qsE7H_Avo5URrwI3frv1ySTJj3DoNVMY1snzVxR-KGakPDK5LYrZW8rk4o7K17D5QW7-qxmnWcfoqWrRPrwP0Dt5hw5cv91yxn2Cjv5cEvfQvDAWQYPs0JTH2jvL2-iidRiDEivIJqOb_zKMAwGbSYsE4O9cPUvWfTvbvcT"/>
+</div>
+<div>
+<div class="flex items-center gap-4 text-xs text-zinc-500 mb-4 font-medium uppercase tracking-wider">
+<span class="text-[#D90429] font-bold">Event</span>
+<span>May 12, 2024</span>
+</div>
+<h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Awarded Corporate Excellence at Asia Business Awards</h4>
+<p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Recognizing our commitment to operational excellence and innovative growth across Southeast Asia.</p>
+<a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-24 px-6 bg-white">
+<div class="max-w-7xl mx-auto bg-zinc-900 rounded-[2rem] p-12 md:p-24 relative overflow-hidden">
+<div class="relative z-10 text-center" data-aos="zoom-in">
+<h2 class="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">Siap Mengakselerasi Kesuksesan Anda?</h2>
+<p class="text-zinc-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Bermitra dengan PT. Mari Sukses Gemilang untuk membuka potensi baru dan mendorong bisnis Anda menuju pertumbuhan berkelanjutan dan kepemimpinan pasar.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button onclick="window.location.href='contact.html'" class="bg-[#D90429] text-white hover:bg-[#B00020] px-10 py-4 rounded-full font-bold shadow-xl transition-all">Bekerja Sama</button>
+<button onclick="window.location.href='about.html'" class="bg-transparent border border-white/20 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all">Jadwalkan Konsultasi</button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-[#D90429]/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -ml-48 -mb-48"></div>
+</div>
+</section>
+<!-- Footer -->
+<!-- Standardized Footer -->
+<footer class="w-full border-t border-zinc-800 bg-black font-sans text-sm text-zinc-400">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="space-y-6">
+            <div class="text-2xl font-heading font-black text-[#D90429] tracking-tighter">MSG</div>
+            <p class="text-zinc-500 leading-relaxed">PT. Mari Sukses Gemilang is a leading multi-sector corporation committed to excellence and sustainable innovation in Indonesia.</p>
+        </div>
+        <div>
+            <h4 class="font-heading font-bold text-white mb-6 text-base tracking-wide">Tautan Cepat</h4>
+            <div class="flex flex-col space-y-3">
+                <a class="text-zinc-500 hover:text-white transition-colors" href="index.html">Beranda</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="about.html">Tentang Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="business.html">Unit Bisnis</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="gallery.html">Galeri</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-heading font-bold text-white mb-6 text-base tracking-wide">Dukungan</h4>
+            <div class="flex flex-col space-y-3">
+                <a class="text-zinc-500 hover:text-white transition-colors" href="news-detail.html">Berita</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="contact.html">Hubungi Kami</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="javascript:void(0)">Kebijakan Privasi</a>
+                <a class="text-zinc-500 hover:text-white transition-colors" href="javascript:void(0)">Syarat & Ketentuan</a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-heading font-bold text-white mb-6 text-base tracking-wide">Ikuti Kami</h4>
+            <div class="flex gap-3">
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">link</span></a>
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">public</span></a>
+                <a class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-[#D90429] hover:border-[#D90429] hover:text-white transition-all" href="javascript:void(0)"><span class="material-symbols-outlined text-sm">mail</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-8 border-t border-zinc-900 text-center text-zinc-600">
+        © 2024 PT. Mari Sukses Gemilang. Semua hak cipta dilindungi.
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 800, once: true});</script>
+<script src="src/main.js"></script>
+</body>
+</html>
