@@ -19,18 +19,4 @@
     .glass-card {
         @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)];
     }
-
-    .animate-float-slow {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    .animate-float-fast {
-        animation: float 4s ease-in-out infinite reverse;
-    }
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
 }
