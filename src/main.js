@@ -6,14 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
             const menuIcon = document.getElementById('menu-icon');
             const closeIcon = document.getElementById('close-icon');
             
             if (menuIcon && closeIcon) {
-                menuIcon.classList.toggle('opacity-0');
-                menuIcon.classList.toggle('rotate-90');
-                closeIcon.classList.toggle('opacity-0');
-                closeIcon.classList.toggle('-rotate-90');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('opacity-0');
+                    menuIcon.classList.add('opacity-100');
+                    closeIcon.classList.remove('opacity-100');
+                    closeIcon.classList.add('opacity-0');
+                } else {
+                    menuIcon.classList.remove('opacity-100');
+                    menuIcon.classList.add('opacity-0');
+                    closeIcon.classList.remove('opacity-0');
+                    closeIcon.classList.add('opacity-100');
+                }
             }
         });
     }

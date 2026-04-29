@@ -28,17 +28,17 @@
             <button onclick="window.location.href='contact.html'" class="bg-[#D90429] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-[#B00020] transition-colors">Hubungi Kami</button>
         </div>
         <div class="md:hidden flex w-3/4 justify-end">
-            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8">
-                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8 focus:outline-none">
+                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900 transition-opacity duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-                <svg id="close-icon" class="absolute inset-0 w-8 h-8 opacity-0 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg id="close-icon" class="absolute inset-0 w-8 h-8 text-zinc-900 transition-opacity duration-300 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex flex-col px-6 py-4 space-y-4 pb-6">
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex-col px-6 py-4 space-y-4 pb-6 md:hidden">
         <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="index.html">Beranda</a>
         <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="about.html">Tentang Kami</a>
         <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="business.html">Unit Bisnis</a>

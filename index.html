@@ -659,33 +659,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({duration: 600, once: true});</script>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const closeIcon = document.getElementById('close-icon');
 
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                    mobileMenu.classList.toggle('flex');
-                    
-                    if (mobileMenu.classList.contains('hidden')) {
-                        menuIcon.classList.remove('opacity-0');
-                        menuIcon.classList.add('opacity-100');
-                        closeIcon.classList.remove('opacity-100');
-                        closeIcon.classList.add('opacity-0');
-                    } else {
-                        menuIcon.classList.remove('opacity-100');
-                        menuIcon.classList.add('opacity-0');
-                        closeIcon.classList.remove('opacity-0');
-                        closeIcon.classList.add('opacity-100');
-                    }
-                });
-            }
-        });
-    </script>
     <script src="src/main.js"></script>
 </body>
 </html>
