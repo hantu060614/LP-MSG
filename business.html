@@ -9,43 +9,86 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Critical CSS to prevent layout shift before Tailwind loads */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: #ffffff;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+        .nav-container {
+            width: 100%;
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.flex {
+            display: flex;
+        }
+    </style>
 </head>
 <body class="bg-surface text-on-background font-body-md antialiased overflow-y-scroll overflow-x-hidden">
-<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-200 font-sans antialiased">
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-        <div class="w-1/4">
-            <a href="index.html" class="text-2xl font-heading font-black text-[#D90429] tracking-tighter">MSG</a>
+<nav id="main-nav" class="antialiased shadow-sm">
+    <div class="nav-container">
+        <!-- Logo Section -->
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#D90429] tracking-tighter leading-none" style="font-family: sans-serif;">MSG</a>
         </div>
-        <div class="hidden md:flex w-2/4 justify-center items-center space-x-8 text-sm">
-            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="index.html">Beranda</a>
-            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
-            <a class="font-medium text-[#D90429]" href="business.html">Unit Bisnis</a>
-            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
-            <a class="font-medium text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
+        
+        <!-- Desktop Navigation Section -->
+        <div class="hidden md:flex items-center justify-center flex-1 px-8 space-x-8 text-sm font-medium">
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="index.html">Beranda</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
+            <a class="text-[#D90429]" href="business.html">Unit Bisnis</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
         </div>
-        <div class="hidden md:flex w-1/4 justify-end">
-            <button onclick="window.location.href='contact.html'" class="bg-[#D90429] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-[#B00020] transition-colors">Hubungi Kami</button>
+
+        <!-- Desktop Action Section -->
+        <div class="hidden md:flex items-center flex-shrink-0">
+            <button onclick="window.location.href='contact.html'" class="bg-[#D90429] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-[#B00020] transition-colors shadow-sm">Hubungi Kami</button>
         </div>
-        <div class="md:hidden flex w-3/4 justify-end">
-            <button id="mobile-menu-btn" class="flex items-center text-zinc-900 relative w-8 h-8 focus:outline-none">
-                <svg id="menu-icon" class="absolute inset-0 w-8 h-8 text-zinc-900 transition-opacity duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <!-- Mobile Menu Button Section -->
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="flex items-center justify-center text-zinc-900 w-10 h-10 -mr-2 focus:outline-none hover:bg-zinc-50 rounded-lg transition-colors">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                <svg id="close-icon" class="absolute inset-0 w-8 h-8 text-zinc-900 transition-opacity duration-300 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
     </div>
-    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-100 shadow-xl flex-col px-6 py-4 space-y-4 pb-6 md:hidden">
-        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="index.html">Beranda</a>
-        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="about.html">Tentang Kami</a>
-        <a class="text-[#D90429] font-semibold" href="business.html">Unit Bisnis</a>
-        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="gallery.html">Galeri</a>
-        <a class="text-zinc-600 font-semibold hover:text-[#D90429]" href="news-detail.html">Berita</a>
-        <div class="pt-4 mt-2 border-t border-zinc-100">
-            <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-[#B00020]">Hubungi Kami</button>
+    
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-200 shadow-2xl flex-col px-6 py-8 space-y-5 md:hidden z-[1001]">
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="index.html">Beranda</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="about.html">Tentang Kami</a>
+        <a class="text-[#D90429] font-bold text-lg block" href="business.html">Unit Bisnis</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="gallery.html">Galeri</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news-detail.html">Berita</a>
+        <div class="pt-6 mt-2 border-t border-zinc-100">
+            <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-4 rounded-xl font-bold text-base shadow-lg active:scale-[0.98] transition-transform">Hubungi Kami</button>
         </div>
     </div>
 </nav>

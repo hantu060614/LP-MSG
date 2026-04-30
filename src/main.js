@@ -4,24 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Mencegah event click bubbling ke document
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
-            
-            const menuIcon = document.getElementById('menu-icon');
-            const closeIcon = document.getElementById('close-icon');
-            
-            if (menuIcon && closeIcon) {
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('opacity-0');
-                    menuIcon.classList.add('opacity-100');
-                    closeIcon.classList.remove('opacity-100');
-                    closeIcon.classList.add('opacity-0');
-                } else {
-                    menuIcon.classList.remove('opacity-100');
-                    menuIcon.classList.add('opacity-0');
-                    closeIcon.classList.remove('opacity-0');
-                    closeIcon.classList.add('opacity-100');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
                 }
             }
         });
