@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="scroll-smooth scroll-pt-20 md:scroll-pt-[136px]" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sedang Dalam Perbaikan | PT. Mari Sukses Gemilang</title>
+    <link rel="stylesheet" href="css/output.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Critical CSS to prevent layout shift before Tailwind loads */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: #ffffff;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+        .nav-container {
+            width: 100%;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.flex {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body-md antialiased overflow-y-scroll overflow-x-hidden flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<nav id="main-nav" class="antialiased shadow-sm">
+    <div class="nav-container">
+        <!-- Logo Section -->
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#D90429] tracking-tighter leading-none" style="font-family: sans-serif;">MSG</a>
+        </div>
+        
+        <!-- Desktop Navigation Section -->
+        <div class="hidden md:flex items-center justify-center flex-1 px-8 space-x-8 text-sm font-medium opacity-50 pointer-events-none">
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Beranda</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Tentang Kami</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Unit Bisnis</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Galeri</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Berita</a>
+        </div>
+
+        <!-- Desktop Action Section -->
+        <div class="hidden md:flex items-center flex-shrink-0 opacity-50 pointer-events-none">
+            <button class="bg-[#D90429] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-[#B00020] transition-colors shadow-sm">Hubungi Kami</button>
+        </div>
+
+        <!-- Mobile Menu Button Section -->
+        <div class="md:hidden flex items-center opacity-50 pointer-events-none">
+            <button id="mobile-menu-btn" class="flex items-center justify-center text-zinc-900 w-10 h-10 -mr-2 focus:outline-none hover:bg-zinc-50 rounded-lg transition-colors">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Maintenance Main Content -->
+<main class="flex-grow flex items-center justify-center pt-32 pb-20 bg-zinc-50 relative z-10">
+    <div class="text-center px-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="600">
+        <span class="material-symbols-outlined text-[#D90429] text-[120px] mb-8 font-light" style="font-variation-settings: 'wght' 200">construction</span>
+        <h2 class="text-4xl font-bold text-zinc-900 mb-6">Situs Sedang Dalam Perbaikan</h2>
+        <p class="text-zinc-600 text-lg mb-8 leading-relaxed">
+            Kami sedang melakukan pemeliharaan rutin untuk meningkatkan pengalaman Anda. Situs web kami akan segera kembali. Terima kasih atas kesabaran Anda.
+        </p>
+    </div>
+</main>
+
+<footer class="w-full bg-[#F4F5F7] font-sans text-sm text-gray-600 border-t border-gray-200 relative overflow-hidden mt-auto">
+    <!-- Indonesia Map Background -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-1/2 h-full opacity-[0.15] pointer-events-none z-0 mix-blend-multiply">
+        <img src="https://pmpland.co.id/sub-www/images/maps.jpg" alt="Indonesia Map" class="w-full h-full object-contain object-right">
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-12 lg:gap-16 relative z-10">
+    
+    <div class="w-full md:w-1/4 flex flex-col space-y-4">
+        <div class="flex items-center mb-4">
+            <h4 class="font-bold text-[#1e293b] text-sm tracking-wide uppercase">PT. Mari Sukses Gemilang</h4>
+            <svg class="w-6 h-4 ml-3 rounded-[2px] shadow-[0_1px_2px_rgba(0,0,0,0.15)]" style="width: 24px; height: 16px; min-width: 24px;" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="3" height="2" fill="#ffffff"/>
+                <rect width="3" height="1" fill="#ce1126"/>
+            </svg>
+        </div>
+        <p class="text-gray-600 leading-relaxed text-sm mb-4">
+            Membangun jaringan bisnis lifestyle terkemuka di Indonesia, berfokus pada kualitas, inovasi, dan pengalaman pelanggan yang luar biasa.
+        </p>
+        <div class="flex gap-3">
+            <a href="javascript:void(0)" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#D90429] hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[16px]">mail</span>
+            </a>
+            <a href="javascript:void(0)" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#25D366] hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[16px]">call</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/4 flex flex-col space-y-4 opacity-50 pointer-events-none">
+        <h4 class="font-bold text-[#1e293b] text-sm tracking-wide mb-2 uppercase">Menu Utama</h4>
+        <div class="flex flex-col space-y-3 text-sm">
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Beranda</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Tentang Kami</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Unit Bisnis</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Galeri</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Berita</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="#">Hubungi Kami</a>
+        </div>
+    </div>
+
+    <div class="w-full md:w-2/4 flex flex-col space-y-4">
+        <h4 class="font-bold text-[#1e293b] text-sm tracking-wide mb-2 uppercase">Jaringan Sosial Media</h4>
+        <div class="grid grid-cols-2 gap-y-3 gap-x-4 text-xs">
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> J Chicken</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Ulon Signature</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Araichi Ramen</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Padelnis Sport</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Luuca</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Momoyo</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Toko Mas An An</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Toko Mas Complete Mulia</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Victory Billiard</a>
+            <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors flex items-center gap-1" href="javascript:void(0)"><span class="material-symbols-outlined text-[14px]">link</span> Grandmonde</a>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-gray-300 text-center text-gray-500 font-medium">
+    © Copyright 2026 PT. MARI SUKSES GEMILANG
+</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 600, once: true});</script>
+<script src="src/main.js"></script>
+</body>
+</html>
