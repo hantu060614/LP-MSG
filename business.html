@@ -107,317 +107,358 @@
 </div>
 </header>
 <!-- Business Sectors Navigation (Pills) -->
-<section class="max-w-7xl mx-auto px-6 mb-lg">
-<div class="flex flex-wrap gap-3">
-<button data-filter="all" class="b-filter-btn px-6 py-2 rounded-full bg-[#D90429] text-white font-bold text-sm shadow-sm transition-all">Semua Sektor</button>
-<button data-filter="fb" class="b-filter-btn px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">F&amp;B</button>
-<button data-filter="retail" class="b-filter-btn px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Retail</button>
-<button data-filter="lifestyle" class="b-filter-btn px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Lifestyle &amp; Hiburan</button>
-</div>
+<section class="max-w-7xl mx-auto px-6 mb-12">
+    <div class="flex flex-wrap gap-3">
+        <a href="#kategori-fb" class="px-6 py-2 rounded-full bg-[#D90429] text-white font-bold text-sm shadow-sm transition-all hover:bg-[#B00020]">Makanan & Minuman (F&B)</a>
+        <a href="#kategori-lifestyle" class="px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Olahraga & Hiburan</a>
+        <a href="#kategori-retail" class="px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Retail & Perhiasan</a>
+    </div>
 </section>
+
 <!-- Business Units Grid -->
-<section class="max-w-7xl mx-auto px-6 mb-20">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1. J Chicken Tuparev -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=2070" alt="J Chicken Tuparev">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">J Chicken Tuparev</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Jl. Tuparev, Cirebon [Detail Alamat Menyusul]</span>
+<section class="max-w-7xl mx-auto px-6 mb-20 space-y-16">
+    
+    <!-- F&B Section -->
+    <div id="kategori-fb" class="scroll-mt-32">
+        <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-4">
+            <div class="w-12 h-12 bg-[#D90429]/10 rounded-xl flex items-center justify-center text-[#D90429]">
+                <span class="material-symbols-outlined text-2xl">restaurant</span>
+            </div>
+            <div>
+                <h2 class="font-heading font-bold text-3xl text-zinc-900">Makanan & Minuman (F&B)</h2>
+                <p class="text-zinc-500 text-sm mt-1">Jaringan kuliner dan kafe untuk melengkapi pengalaman Anda.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. J Chicken Tuparev -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=2070" alt="J Chicken Tuparev">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">J Chicken Tuparev</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Jl. Tuparev, Cirebon [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 2. J Chicken Ciledug -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1569058242253-1df250a26eb5?q=80&w=2070" alt="J Chicken Ciledug">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">J Chicken Ciledug</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Ciledug [Detail Alamat Menyusul]</span>
+            <!-- 2. J Chicken Ciledug -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1569058242253-1df250a26eb5?q=80&w=2070" alt="J Chicken Ciledug">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">J Chicken Ciledug</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Ciledug [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 3. Ulon Signature Tuparev -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047" alt="Ulon Signature Tuparev">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Signature Tuparev</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Jl. Tuparev, Cirebon [Detail Alamat Menyusul]</span>
+            <!-- 3. Ulon Signature Tuparev -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047" alt="Ulon Signature Tuparev">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Signature Tuparev</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Jl. Tuparev, Cirebon [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 4. Ulon Ciledug -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2071" alt="Ulon Ciledug">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Ciledug</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Ciledug [Detail Alamat Menyusul]</span>
+            <!-- 4. Ulon Ciledug -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2071" alt="Ulon Ciledug">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Ciledug</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Ciledug [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 5. Araichi Ramen -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=2064" alt="Araichi Ramen">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Araichi Ramen</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+            <!-- 5. Araichi Ramen -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=2064" alt="Araichi Ramen">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Restoran</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Araichi Ramen</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 6. Padelnis Sport -->
-                <article data-category="lifestyle" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1622279457486-69d73ce187fc?q=80&w=2070" alt="Padelnis Sport">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Lifestyle</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Padelnis Sport</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+            <!-- 7. Luuca -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2064" alt="Luuca">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Dessert</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Luuca Ciledug</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 7. Luuca -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2064" alt="Luuca">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Luuca</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+            <!-- 8. Momoyo -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?q=80&w=2027" alt="Momoyo">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Dessert</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Momoyo</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 8. Momoyo -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?q=80&w=2027" alt="Momoyo">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Momoyo</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+            <!-- 12. Ulon Pekanbaru -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071" alt="Ulon Pekanbaru">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Pekanbaru</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Pekanbaru [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
+            <!-- 14. Grandmonde -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full opacity-80">
+                <div class="relative h-56 overflow-hidden bg-zinc-200">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity opacity-70" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2067" alt="Grandmonde">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
+                        <span class="text-white font-bold tracking-widest text-sm uppercase px-4 py-2 border-2 border-white rounded-lg">Masih Renovasi</span>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-zinc-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm uppercase tracking-wider">Hiburan</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Grandmonde</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">construction</span>
+                            <span class="text-amber-600 font-semibold">Segera Hadir</span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 
-                <!-- 9. Toko Mas An An -->
-                <article data-category="retail" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1599643478524-fb66f70a00d8?q=80&w=2070" alt="Toko Mas An An">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Retail</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas An An</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+    <!-- Olahraga & Hiburan Section -->
+    <div id="kategori-lifestyle" class="scroll-mt-32 pt-8">
+        <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-4">
+            <div class="w-12 h-12 bg-[#D90429]/10 rounded-xl flex items-center justify-center text-[#D90429]">
+                <span class="material-symbols-outlined text-2xl">sports_tennis</span>
+            </div>
+            <div>
+                <h2 class="font-heading font-bold text-3xl text-zinc-900">Olahraga & Hiburan</h2>
+                <p class="text-zinc-500 text-sm mt-1">Fasilitas olahraga premium dan pusat hiburan keluarga.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 6. Padelnis Sport -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1622279457486-69d73ce187fc?q=80&w=2070" alt="Padelnis Sport">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Olahraga</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Padelnis Sport</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 10. Toko Mas Complete Mulia Arjawinangun -->
-                <article data-category="retail" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=2070" alt="Toko Mas Complete Mulia Arjawinangun">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Retail</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas Complete Mulia</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Arjawinangun [Detail Alamat Menyusul]</span>
+            <!-- 13. Victory Billiard -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1587889150064-075e7a9e6eb1?q=80&w=2070" alt="Victory Billiard">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Hiburan</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Victory Billiard</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 11. Toko Mas Complete Mulia Purwakarta -->
-                <article data-category="retail" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full opacity-80">
-                    <div class="relative h-56 overflow-hidden bg-zinc-200">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity opacity-70" src="https://images.unsplash.com/photo-1573408301145-b98c4af01158?q=80&w=2069" alt="Toko Mas Complete Mulia Purwakarta">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
-                            <span class="text-white font-bold tracking-widest text-sm uppercase px-4 py-2 border-2 border-white rounded-lg">Masih Renovasi</span>
-                        </div>
-                        <div class="absolute top-4 left-4 bg-zinc-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm uppercase tracking-wider">Retail</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas Complete Mulia</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Purwakarta [Detail Alamat Menyusul]</span>
-                        </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">construction</span>
-                                <span class="text-amber-600 font-semibold">Segera Hadir</span>
-                            </p>
-                        </div>
-                    </div>
-                </article>
+        </div>
+    </div>
 
-                <!-- 12. Ulon Pekanbaru -->
-                <article data-category="fb" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071" alt="Ulon Pekanbaru">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Ulon Pekanbaru</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>Pekanbaru [Detail Alamat Menyusul]</span>
+    <!-- Retail & Perhiasan Section -->
+    <div id="kategori-retail" class="scroll-mt-32 pt-8">
+        <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-4">
+            <div class="w-12 h-12 bg-[#D90429]/10 rounded-xl flex items-center justify-center text-[#D90429]">
+                <span class="material-symbols-outlined text-2xl">diamond</span>
+            </div>
+            <div>
+                <h2 class="font-heading font-bold text-3xl text-zinc-900">Retail & Perhiasan</h2>
+                <p class="text-zinc-500 text-sm mt-1">Koleksi perhiasan eksklusif dan layanan retail berkualitas tinggi.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 9. Toko Mas An An -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1599643478524-fb66f70a00d8?q=80&w=2070" alt="Toko Mas An An">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Retail</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas An An</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>[Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 13. Victory Billiard -->
-                <article data-category="lifestyle" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
-                    <div class="relative h-56 overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1587889150064-075e7a9e6eb1?q=80&w=2070" alt="Victory Billiard">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Lifestyle</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Victory Billiard</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+            <!-- 10. Toko Mas Complete Mulia Arjawinangun -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+                <div class="relative h-56 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=2070" alt="Toko Mas Complete Mulia Arjawinangun">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Retail</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas Complete Mulia</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Arjawinangun [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
+                            <span class="italic text-zinc-400">Jam Operasional: TBC</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">schedule</span>
-                                <span class="italic text-zinc-400">Jam Operasional: TBC</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- 14. Grandmonde -->
-                <article data-category="lifestyle" class="b-item bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full opacity-80">
-                    <div class="relative h-56 overflow-hidden bg-zinc-200">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity opacity-70" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2067" alt="Grandmonde">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
-                            <span class="text-white font-bold tracking-widest text-sm uppercase px-4 py-2 border-2 border-white rounded-lg">Masih Renovasi</span>
-                        </div>
-                        <div class="absolute top-4 left-4 bg-zinc-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm uppercase tracking-wider">Lifestyle</div>
+            <!-- 11. Toko Mas Complete Mulia Purwakarta -->
+            <article onclick="window.location.href='unit-detail.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full opacity-80">
+                <div class="relative h-56 overflow-hidden bg-zinc-200">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity opacity-70" src="https://images.unsplash.com/photo-1573408301145-b98c4af01158?q=80&w=2069" alt="Toko Mas Complete Mulia Purwakarta">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
+                        <span class="text-white font-bold tracking-widest text-sm uppercase px-4 py-2 border-2 border-white rounded-lg">Masih Renovasi</span>
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-bold text-xl text-zinc-900 mb-2">Grandmonde</h3>
-                        <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
-                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-                            <span>[Detail Alamat Menyusul]</span>
+                    <div class="absolute top-4 left-4 bg-zinc-800/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm uppercase tracking-wider">Retail</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-xl text-zinc-900 mb-2">Toko Mas Complete Mulia</h3>
+                    <p class="text-zinc-500 text-sm mb-4 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Purwakarta [Detail Alamat Menyusul]</span>
+                    </p>
+                    <div class="mt-auto pt-4 border-t border-zinc-100">
+                        <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
+                            <span class="material-symbols-outlined text-base text-zinc-400">construction</span>
+                            <span class="text-amber-600 font-semibold">Segera Hadir</span>
                         </p>
-                        <div class="mt-auto pt-4 border-t border-zinc-100">
-                            <p class="text-zinc-600 text-sm flex items-center gap-2 font-medium">
-                                <span class="material-symbols-outlined text-base text-zinc-400">construction</span>
-                                <span class="text-amber-600 font-semibold">Segera Hadir</span>
-                            </p>
-                        </div>
                     </div>
-                </article>
-</div>
+                </div>
+            </article>
+        </div>
+    </div>
 </section>
 <!-- Stats Section -->
 <section class="bg-primary py-xl">
