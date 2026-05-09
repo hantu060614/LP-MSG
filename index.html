@@ -65,7 +65,7 @@
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="business.html">Unit Bisnis</a>
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
-            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news.html">Berita</a>
         </div>
 
         <!-- Desktop Action Section -->
@@ -89,7 +89,7 @@
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="about.html">Tentang Kami</a>
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="business.html">Unit Bisnis</a>
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="gallery.html">Galeri</a>
-        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news.html">Berita</a>
         <div class="pt-6 mt-2 border-t border-zinc-100">
             <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-4 rounded-xl font-bold text-base shadow-lg active:scale-[0.98] transition-transform">Hubungi Kami</button>
         </div>
@@ -183,7 +183,7 @@
                 <h2 class="font-heading font-bold text-4xl lg:text-5xl mb-6 text-zinc-900 leading-[1.1]">Portofolio Bisnis Kami</h2>
                 <p class="text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed">Jaringan bisnis yang terus berkembang, menghadirkan produk dan layanan terbaik untuk gaya hidup Anda.</p>
             </div>
-            <div class="space-y-16 w-full">
+            <div class="space-y-16 w-full" data-business-sections="home">
                 <!-- F&B Section -->
                 <div>
                     <div class="flex items-center gap-4 mb-8 border-b border-zinc-100 pb-4">
@@ -197,7 +197,7 @@
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         <!-- 1. J Chicken Tuparev -->
-                        <div onclick="window.location.href='j-chicken-tprv.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div onclick="window.location.href='unit-detail.html?id=j-chicken-tuparev'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/j-chicken-tprv/j-chicken-tprv-photo-01.jpg" alt="J Chicken Tuparev">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
@@ -239,7 +239,7 @@
                         </div>
 
                         <!-- 3. Ulon Signature Tuparev -->
-                        <div onclick="window.location.href='ulon-signature.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <div onclick="window.location.href='unit-detail.html?id=ulon-signature-tuparev'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ulon-signature/ulon-signature-photo-01.jpg" alt="Ulon Signature Tuparev">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -260,7 +260,7 @@
                         </div>
 
                         <!-- 4. Ulon Ciledug -->
-                        <div onclick="window.location.href='ulon-coffee-cld.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="250">
+                        <div onclick="window.location.href='unit-detail.html?id=ulon-ciledug'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="250">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ulon-coffee-cld/ulon-coffee-cld-photo-01.jpg" alt="Ulon Ciledug">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -281,7 +281,7 @@
                         </div>
 
                         <!-- 5. Araichi Ramen -->
-                        <div onclick="window.location.href='araichi-ramen.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                        <div onclick="window.location.href='unit-detail.html?id=araichi-ramen'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/araichi-ramen/araichi-ramen-photo-01.jpg" alt="Araichi Ramen">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
@@ -344,7 +344,7 @@
                         </div>
 
                         <!-- 12. Ulon Pekanbaru -->
-                        <div onclick="window.location.href='ulon-coffee-pku.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="450">
+                        <div onclick="window.location.href='unit-detail.html?id=ulon-pekanbaru'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="450">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071" alt="Ulon Pekanbaru">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -364,7 +364,7 @@
                             </div>
                         </div>
                         <!-- 14. Grandmonde -->
-                        <div onclick="window.location.href='grandmonde.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <div onclick="window.location.href='unit-detail.html?id=grandmonde'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/GRANDMONDE/grandmonde-photo-01.jpg" alt="Grandmonde">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -399,7 +399,7 @@
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         <!-- 6. Padelnis Sport -->
-                        <div onclick="window.location.href='padelnis-sport.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div onclick="window.location.href='unit-detail.html?id=padelnis-sport'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                             <div class="relative h-48 overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/padelnis-sport/padelnis-sport-photo-01.jpg" alt="Padelnis Sport">
                                 <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Olahraga</div>
@@ -583,7 +583,7 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-white" data-news-preview>
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6" data-aos="fade-up">
                 <div>
@@ -591,11 +591,11 @@
                     <h2 class="font-heading font-bold text-4xl text-zinc-900 mb-4">Wawasan Terbaru</h2>
                     <p class="text-zinc-500 max-w-xl text-lg">Dapatkan informasi terbaru mengenai pergerakan perusahaan dan laporan industri kami.</p>
                 </div>
-                <a href="news-detail.html" class="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+                <a href="news.html" class="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
                     Lihat Semua Berita <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8" data-news-preview-grid>
                 <div class="bg-white rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
                     <div class="h-64 overflow-hidden rounded-xl mb-6">
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Businesswomen discussing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWipIQAx0P1KFTsqUPo3ZdXEp8oRh6G-_D81P-lgqNrDKpJz3moZeEAcBaz3RNYEB5LABGjfBvPhtKGdhskSJSFRe-8zjFFCpkz86poq6cn6gbc7Ehu4_ZgcN1gjziGmvDf69JZAyw0SxtdXCz2Swv7ZHxnFVSiIBxizaqhFwWdI8NYCyPc7aWGerA9sGZTe10N8mF7vWsW5-5PR2AW_gf6efE4C8KenIMSrh4fuS7RUpFFB-9MkpkPWyRdLRS0yZZVpCMIy1SvwkL"/>
@@ -607,7 +607,7 @@
                         </div>
                         <h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Annual Business Summit: Transforming the Future of Fintech</h4>
                         <p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Join us for a three-day intensive summit featuring world-class speakers and innovative workshops on digital transformation.</p>
-                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
@@ -621,7 +621,7 @@
                         </div>
                         <h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">Green Initiative 2024: MSG Commits to Net-Zero Construction</h4>
                         <p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Launching our new sustainability framework to ensure every square meter we build respects the environment.</p>
-                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
                     </div>
                 </div>
                 <div class="bg-white rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
@@ -635,7 +635,7 @@
                         </div>
                         <h4 class="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">MSG Awarded Corporate Excellence at Asia Business Awards</h4>
                         <p class="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">Recognizing our commitment to operational excellence and innovative growth across Southeast Asia.</p>
-                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news-detail.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        <a class="text-sm font-bold text-[#D90429] flex items-center gap-1 group-hover:gap-2 transition-all" href="news.html">Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
                     </div>
                 </div>
             </div>
@@ -694,7 +694,7 @@
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="about.html">Tentang Kami</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="business.html">Unit Bisnis</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="gallery.html">Galeri</a>
-                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news-detail.html">Berita</a>
+                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news.html">Berita</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="contact.html">Hubungi Kami</a>
             </div>
         </div>
@@ -725,6 +725,7 @@
     <script>AOS.init({duration: 600, once: true});</script>
     
 
+    <script src="src/site-data.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>

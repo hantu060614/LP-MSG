@@ -62,7 +62,7 @@
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
             <a class="text-[#D90429]" href="business.html">Unit Bisnis</a>
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="gallery.html">Galeri</a>
-            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news.html">Berita</a>
         </div>
 
         <!-- Desktop Action Section -->
@@ -86,7 +86,7 @@
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="about.html">Tentang Kami</a>
         <a class="text-[#D90429] font-bold text-lg block" href="business.html">Unit Bisnis</a>
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="gallery.html">Galeri</a>
-        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news.html">Berita</a>
         <div class="pt-6 mt-2 border-t border-zinc-100">
             <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-4 rounded-xl font-bold text-base shadow-lg active:scale-[0.98] transition-transform">Hubungi Kami</button>
         </div>
@@ -108,7 +108,7 @@
 </header>
 <!-- Business Sectors Navigation (Pills) -->
 <section class="max-w-7xl mx-auto px-6 mb-12">
-    <div class="flex flex-wrap gap-3">
+    <div class="flex flex-wrap gap-3" data-business-category-nav>
         <a href="#kategori-fb" class="px-6 py-2 rounded-full bg-[#D90429] text-white font-bold text-sm shadow-sm transition-all hover:bg-[#B00020]">Makanan & Minuman (F&B)</a>
         <a href="#kategori-lifestyle" class="px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Olahraga & Hiburan</a>
         <a href="#kategori-retail" class="px-6 py-2 rounded-full bg-zinc-100 text-zinc-600 font-medium text-sm hover:bg-zinc-200 transition-all">Retail & Perhiasan</a>
@@ -116,7 +116,7 @@
 </section>
 
 <!-- Business Units Grid -->
-<section class="max-w-7xl mx-auto px-6 mb-20 space-y-16">
+<section class="max-w-7xl mx-auto px-6 mb-20 space-y-16" data-business-sections="full">
     
     <!-- F&B Section -->
     <div id="kategori-fb" class="scroll-mt-32">
@@ -131,7 +131,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- 1. J Chicken Tuparev -->
-            <article onclick="window.location.href='j-chicken-tprv.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=j-chicken-tuparev'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/j-chicken-tprv/j-chicken-tprv-photo-01.jpg" alt="J Chicken Tuparev">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
@@ -173,7 +173,7 @@
             </article>
 
             <!-- 3. Ulon Signature Tuparev -->
-            <article onclick="window.location.href='ulon-signature.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=ulon-signature-tuparev'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ulon-signature/ulon-signature-photo-01.jpg" alt="Ulon Signature Tuparev">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -194,7 +194,7 @@
             </article>
 
             <!-- 4. Ulon Ciledug -->
-            <article onclick="window.location.href='ulon-coffee-cld.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=ulon-ciledug'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ulon-coffee-cld/ulon-coffee-cld-photo-01.jpg" alt="Ulon Ciledug">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -215,7 +215,7 @@
             </article>
 
             <!-- 5. Araichi Ramen -->
-            <article onclick="window.location.href='araichi-ramen.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=araichi-ramen'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/araichi-ramen/araichi-ramen-photo-01.jpg" alt="Araichi Ramen">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">F&B</div>
@@ -278,7 +278,7 @@
             </article>
 
             <!-- 12. Ulon Pekanbaru -->
-            <article onclick="window.location.href='ulon-coffee-pku.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=ulon-pekanbaru'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071" alt="Ulon Pekanbaru">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -298,7 +298,7 @@
                 </div>
             </article>
             <!-- 14. Grandmonde -->
-            <article onclick="window.location.href='grandmonde.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=grandmonde'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/GRANDMONDE/grandmonde-photo-01.jpg" alt="Grandmonde">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Cafe</div>
@@ -333,7 +333,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- 6. Padelnis Sport -->
-            <article onclick="window.location.href='padelnis-sport.html'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
+            <article onclick="window.location.href='unit-detail.html?id=padelnis-sport'" class="cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full">
                 <div class="relative h-56 overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/padelnis-sport/padelnis-sport-photo-01.jpg" alt="Padelnis Sport">
                     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#D90429] shadow-sm uppercase tracking-wider">Olahraga</div>
@@ -529,7 +529,7 @@
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="about.html">Tentang Kami</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="business.html">Unit Bisnis</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="gallery.html">Galeri</a>
-                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news-detail.html">Berita</a>
+                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news.html">Berita</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="contact.html">Hubungi Kami</a>
             </div>
         </div>
@@ -559,6 +559,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration: 600, once: true});</script>
+<script src="src/site-data.js"></script>
 <script src="src/main.js"></script>
 </body>
 

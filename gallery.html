@@ -60,7 +60,7 @@
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="about.html">Tentang Kami</a>
             <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="business.html">Unit Bisnis</a>
             <a class="text-[#D90429]" href="gallery.html">Galeri</a>
-            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news-detail.html">Berita</a>
+            <a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="news.html">Berita</a>
         </div>
 
         <!-- Desktop Action Section -->
@@ -84,7 +84,7 @@
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="about.html">Tentang Kami</a>
         <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="business.html">Unit Bisnis</a>
         <a class="text-[#D90429] font-bold text-lg block" href="gallery.html">Galeri</a>
-        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news-detail.html">Berita</a>
+        <a class="text-zinc-600 font-bold text-lg hover:text-[#D90429] block" href="news.html">Berita</a>
         <div class="pt-6 mt-2 border-t border-zinc-100">
             <button onclick="window.location.href='contact.html'" class="w-full bg-[#D90429] text-white px-6 py-4 rounded-xl font-bold text-base shadow-lg active:scale-[0.98] transition-transform">Hubungi Kami</button>
         </div>
@@ -99,7 +99,7 @@
 <p class="text-lg text-zinc-600 mb-8">Melihat lebih dekat fasilitas, suasana, dan operasional dari jaringan unit bisnis unggulan di bawah naungan PT. Mari Sukses Gemilang.</p>
 </div>
 <!-- Filter Controls -->
-<div class="flex flex-wrap gap-base border-b border-zinc-200 pb-6" id="filter-container">
+<div class="flex flex-wrap gap-base border-b border-zinc-200 pb-6" id="filter-container" data-gallery-filters>
 <button data-filter="all" class="filter-btn px-6 py-2 bg-[#D90429] text-white rounded-full font-medium transition-colors shadow-sm">Semua Galeri</button>
 <button data-filter="fnb" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">F&B</button>
 <button data-filter="cafe" class="filter-btn px-6 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 rounded-full font-medium transition-colors">Cafe</button>
@@ -108,7 +108,7 @@
 </section>
 <!-- Masonry Gallery -->
 <section class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid" data-gallery-grid>
 <!-- Gallery Item 1 -->
 <div data-category="fnb" class="gallery-item cursor-pointer mb-md group relative overflow-hidden rounded-xl bg-white border border-zinc-100 transition-all hover:shadow-xl">
 <img class="gallery-img w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="J Chicken Tuparev" src="assets/img/j-chicken-tprv/j-chicken-tprv-photo-01.jpg"/>
@@ -264,7 +264,7 @@
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="about.html">Tentang Kami</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="business.html">Unit Bisnis</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="gallery.html">Galeri</a>
-                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news-detail.html">Berita</a>
+                <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="news.html">Berita</a>
                 <a class="text-gray-600 hover:text-[#D90429] font-medium transition-colors" href="contact.html">Hubungi Kami</a>
             </div>
         </div>
@@ -293,6 +293,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration: 600, once: true});</script>
+<script src="src/site-data.js"></script>
 <script src="src/main.js"></script>
 </body>
 </html>
