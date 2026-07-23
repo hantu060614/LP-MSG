@@ -121,7 +121,8 @@ export default function Home() {
               <span className="text-[#D90429] font-bold tracking-widest text-xs uppercase mb-4 block">Tentang Kami</span>
               <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 text-zinc-900 leading-[1.1]">Menjadi Bagian dari Kehidupan Sehari-hari.</h2>
               <p className="text-lg text-zinc-500 mb-6 leading-relaxed">Kami mengintegrasikan standar tinggi dalam setiap aspek bisnis, mulai dari pemilihan bahan baku, proses produksi, hingga pelayanan kepada pelanggan. Setiap detail diperhatikan untuk memastikan pengalaman yang konsisten dan memuaskan.</p>
-              <p className="text-lg text-zinc-500 mb-10 leading-relaxed">Di sisi lifestyle, personalisasi menjadi kunci. Konsumen ingin merasa terhubung secara personal dengan brand. Oleh karena itu, storytelling, identitas visual, dan komunikasi yang autentik menjadi faktor penting dalam membangun loyalitas.</p>
+              <p className="text-lg text-zinc-500 mb-6 leading-relaxed">Di sisi lifestyle, personalisasi menjadi kunci. Konsumen ingin merasa terhubung secara personal dengan brand. Oleh karena itu, storytelling, identitas visual, dan komunikasi yang autentik menjadi faktor penting dalam membangun loyalitas.</p>
+              <p className="text-lg text-zinc-500 mb-10 leading-relaxed">Sebagai holding di Cirebon, MSG mengelola portofolio F&B, cafe, olahraga, hiburan, dan retail agar setiap brand saling memperkuat ekosistem — memberikan nilai bagi pelanggan, mitra, dan komunitas lokal.</p>
               <div className="space-y-8">
                 <div className="flex gap-5">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D90429]/10 text-[#D90429] flex items-center justify-center"><span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span></div>

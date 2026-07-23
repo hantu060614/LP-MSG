@@ -18,6 +18,7 @@ const Home = lazy(() => import("./pages/Home.jsx"));
 const News = lazy(() => import("./pages/News.jsx"));
 const NewsDetail = lazy(() => import("./pages/NewsDetail.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+const Privacy = lazy(() => import("./pages/Privacy.jsx"));
 const UnitDetail = lazy(() => import("./pages/UnitDetail.jsx"));
 
 function RouteFallback() {
@@ -72,6 +73,7 @@ export default function App() {
                 <Route path="/news" element={<News />} />
                 <Route path="/news/:id" element={<NewsDetail />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<Privacy />} />
                 <Route path="/unit/:id" element={<UnitDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

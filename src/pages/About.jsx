@@ -79,6 +79,7 @@ function HeroSection() {
           <div className="text-zinc-600 text-lg leading-relaxed space-y-6 max-w-xl">
             <p>PT. Mari Sukses Gemilang (MSG) adalah holding company yang berfokus pada sektor gaya hidup, F&B, dan retail. Kami hadir untuk menyajikan kualitas, inovasi, dan momen tak terlupakan bagi setiap pelanggan.</p>
             <p>Mulai dari secangkir kopi pagi hingga hidangan istimewa, dari kebutuhan gaya hidup hingga aktivitas olahraga, setiap unit bisnis kami dirancang untuk menemani dan merayakan setiap langkah keseharian Anda.</p>
+            <p>Berbasis di Cirebon, MSG mengembangkan jaringan brand lokal yang relevan dengan komunitas — menjaga standar operasional, memperkuat identitas visual, dan membangun hubungan jangka panjang dengan pelanggan serta mitra.</p>
           </div>
           <div className="mt-12">
             <a href="#perjalanan" className="inline-block border-2 border-[#D90429] text-[#D90429] font-bold py-3 px-8 rounded-lg hover:bg-[#D90429] hover:text-white transition-all">

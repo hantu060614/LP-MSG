@@ -12,7 +12,18 @@ export default function News() {
         <div className="max-w-3xl" data-aos="fade-up">
           <span className="text-[#D90429] font-bold text-sm uppercase tracking-widest mb-4 block">Berita & Insight</span>
           <h1 className="text-5xl font-bold text-zinc-900 mb-4">Wawasan Terbaru</h1>
-          <p className="text-lg text-zinc-600">Dapatkan informasi terbaru mengenai pergerakan perusahaan, aktivitas unit bisnis, campaign, dan insight dari PT. Mari Sukses Gemilang.</p>
+          <p className="text-lg text-zinc-600 mb-4">Dapatkan informasi terbaru mengenai pergerakan perusahaan, aktivitas unit bisnis, campaign, dan insight dari PT. Mari Sukses Gemilang.</p>
+          <p className="text-base text-zinc-500 leading-relaxed">Artikel ditulis oleh Tim Corporate Communications MSG dan mencakup pembukaan outlet, program komunitas, serta promo unit F&B. Untuk konteks industri pariwisata dan ekonomi kreatif Indonesia, Anda juga dapat merujuk ke{" "}
+            <a
+              href="https://kemenparekraf.go.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D90429] font-semibold hover:underline"
+            >
+              Kementerian Pariwisata dan Ekonomi Kreatif
+            </a>
+            .
+          </p>
         </div>
       </header>
 
@@ -30,9 +41,10 @@ export default function News() {
                 <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={art.image} alt={art.alt || art.title} loading="lazy" />
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-4 text-xs text-zinc-500 mb-4 font-medium uppercase tracking-wider">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-zinc-500 mb-4 font-medium uppercase tracking-wider">
                   <span className="text-[#D90429] font-bold">{art.category}</span>
                   <span>{art.date}</span>
+                  <span className="normal-case tracking-normal">Oleh {art.author}</span>
                 </div>
                 <h4 className="font-heading font-bold text-xl mb-3 text-zinc-900 group-hover:text-[#D90429] transition-colors line-clamp-2">{art.title}</h4>
                 <p className="text-zinc-500 text-sm line-clamp-2 mb-4 leading-relaxed">{art.excerpt}</p>

@@ -1,6 +1,6 @@
 /** Shared SEO metadata for build-time HTML shells and runtime document head. */
 
-export const SITE_URL = "https://marisuksesgemilang.com";
+export const SITE_URL = "https://marisuksesgemilang.co.id";
 export const SITE_NAME = "PT. Mari Sukses Gemilang";
 export const OG_IMAGE = `${SITE_URL}/assets/img/banner_home.jpeg`;
 export const DEFAULT_OG_IMAGE_ALT =
@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: "/gallery", label: "Galeri" },
   { href: "/news", label: "Berita" },
   { href: "/contact", label: "Kontak" },
+  { href: "/privacy", label: "Kebijakan Privasi" },
 ];
 
 /**
@@ -26,7 +27,7 @@ const NAV_LINKS = [
  * @property {string} [canonicalPath]
  */
 
-const SHARED_CLOSING = `PT. Mari Sukses Gemilang mengelola unit F&B, olahraga & hiburan, serta retail di Cirebon dan sekitarnya. Gunakan navigasi untuk menjelajahi unit bisnis, galeri, berita, dan kontak Head Office.`;
+const SHARED_CLOSING = `PT. Mari Sukses Gemilang (MSG) adalah holding lifestyle yang mengelola unit F&B, cafe, olahraga dan hiburan, serta retail di Cirebon dan sekitarnya. Portofolio kami mencakup J Chicken, Ulon Signature, Ulon Ciledug, Araichi Ramen, Luuca, Padelnis Sport, Victory Billiard, Grandmonde, serta jaringan retail Toko Mas An An dan Toko Mas Complete Mulia. Gunakan navigasi untuk menjelajahi profil perusahaan, unit bisnis, galeri visual, berita, dan saluran kontak Head Office di Jl. Tuparev No.20, Kedawung, Cirebon.`;
 
 /** @type {Record<string, PageSeo>} */
 export const PAGE_SEO = {
@@ -34,9 +35,11 @@ export const PAGE_SEO = {
     path: "/",
     title: "PT. Mari Sukses Gemilang | Lifestyle Business Group",
     description:
-      "PT. Mari Sukses Gemilang membangun jaringan bisnis lifestyle: F&B, olahraga & hiburan, serta retail berkualitas di Indonesia.",
+      "PT. Mari Sukses Gemilang membangun jaringan bisnis lifestyle terkemuka: F&B, cafe, olahraga & hiburan, serta retail berkualitas di Cirebon dan Indonesia.",
     h1: "Membangun jaringan bisnis lifestyle terkemuka di Indonesia.",
-    body: `PT. Mari Sukses Gemilang (MSG) mengelola ekosistem unit usaha yang mencakup kuliner dan kafe, fasilitas olahraga & hiburan, serta retail. Situs ini merangkum profil perusahaan, unit bisnis, galeri, dan saluran kontak.
+    body: `PT. Mari Sukses Gemilang (MSG) mengelola ekosistem unit usaha yang mencakup kuliner dan kafe, fasilitas olahraga dan hiburan, serta retail. Kami menghadirkan brand yang menjadi bagian dari kehidupan sehari-hari pelanggan — dari momen makan bersama keluarga hingga aktivitas olahraga dan gaya hidup.
+
+Setiap unit bisnis MSG dibangun dengan standar kualitas, inovasi operasional, dan pengalaman pelanggan yang konsisten. Situs ini merangkum profil perusahaan, portofolio unit, galeri visual, berita terkini, serta saluran kontak resmi Head Office.
 
 ${SHARED_CLOSING}`,
   },
@@ -44,9 +47,11 @@ ${SHARED_CLOSING}`,
     path: "/about",
     title: "Tentang Kami | PT. Mari Sukses Gemilang",
     description:
-      "Profil PT. Mari Sukses Gemilang: visi, misi, nilai, dan perjalanan membangun ekosistem lifestyle.",
+      "Profil lengkap PT. Mari Sukses Gemilang: visi, misi, nilai inti, kepemimpinan, dan perjalanan membangun ekosistem bisnis lifestyle di Cirebon sejak 2009.",
     h1: "Tentang PT. Mari Sukses Gemilang.",
-    body: `Halaman ini menjelaskan perjalanan, nilai inti, dan arah strategis MSG sebagai holding lifestyle.
+    body: `Halaman ini menjelaskan perjalanan, nilai inti, dan arah strategis MSG sebagai holding lifestyle. Sejak fondasi retail pada 2009, ekspansi F&B pada 2015, diversifikasi olahraga pada 2020, hingga integrasi ekosistem modern pada 2024, MSG terus bertumbuh dengan fokus pada kualitas layanan dan pengalaman pelanggan.
+
+Visi kami adalah menjadi kelompok usaha lifestyle yang dipercaya, memberi pengalaman berkualitas, dan bertumbuh secara sehat melalui kejujuran serta kinerja unggul. Nilai utama kami mencakup integritas, keunggulan, inovasi, dan keberlanjutan.
 
 ${SHARED_CLOSING}`,
   },
@@ -54,9 +59,11 @@ ${SHARED_CLOSING}`,
     path: "/business",
     title: "Unit Bisnis | PT. Mari Sukses Gemilang",
     description:
-      "Jelajahi unit bisnis MSG: F&B, olahraga & hiburan, serta retail & perhiasan.",
+      "Jelajahi unit bisnis PT. Mari Sukses Gemilang: F&B (J Chicken, Araichi Ramen), cafe (Ulon, Luuca), olahraga & hiburan (Padelnis, Victory Billiard), serta retail perhiasan.",
     h1: "Unit bisnis dalam ekosistem MSG.",
-    body: `Daftar unit usaha MSG berdasarkan kategori, lengkap dengan lokasi dan informasi operasional.
+    body: `Daftar unit usaha MSG berdasarkan kategori, lengkap dengan lokasi dan informasi operasional. Segmen F&B mencakup J Chicken Tuparev dan Ciledug serta Araichi Ramen. Segmen cafe mencakup Ulon Signature, Ulon Ciledug, dan Luuca. Segmen olahraga dan hiburan mencakup Padelnis Sport, Victory Billiard, dan Grandmonde. Segmen retail mencakup Toko Mas An An dan Toko Mas Complete Mulia.
+
+Setiap brand dirancang untuk memenuhi kebutuhan gaya hidup modern di Cirebon dan sekitarnya, dengan fokus pada kualitas produk, suasana outlet, dan layanan yang ramah.
 
 ${SHARED_CLOSING}`,
   },
@@ -64,9 +71,11 @@ ${SHARED_CLOSING}`,
     path: "/gallery",
     title: "Galeri | PT. Mari Sukses Gemilang",
     description:
-      "Galeri visual unit usaha PT. Mari Sukses Gemilang: F&B, cafe, dan olahraga.",
+      "Galeri visual unit usaha PT. Mari Sukses Gemilang: dokumentasi F&B, cafe, olahraga, dan fasilitas di jaringan bisnis lifestyle MSG di Cirebon.",
     h1: "Galeri unit usaha MSG.",
-    body: `Koleksi foto dari unit F&B, cafe, dan fasilitas olahraga di jaringan MSG.
+    body: `Koleksi foto dari unit F&B, cafe, dan fasilitas olahraga di jaringan MSG. Galeri ini menampilkan suasana outlet, aktivitas pelanggan, serta dokumentasi fasilitas dari J Chicken, Ulon Signature, Luuca, Araichi Ramen, Padelnis Sport, dan unit lainnya.
+
+Dokumentasi visual membantu calon pelanggan dan mitra memahami karakter setiap brand dalam ekosistem lifestyle MSG sebelum berkunjung langsung ke lokasi.
 
 ${SHARED_CLOSING}`,
   },
@@ -74,9 +83,11 @@ ${SHARED_CLOSING}`,
     path: "/news",
     title: "Berita | PT. Mari Sukses Gemilang",
     description:
-      "Berita dan update terbaru dari PT. Mari Sukses Gemilang serta unit usahanya.",
+      "Berita, promo, dan update terbaru dari PT. Mari Sukses Gemilang serta unit usaha F&B, cafe, olahraga, dan retail di jaringan lifestyle MSG.",
     h1: "Berita dan update MSG.",
-    body: `Artikel dan pengumuman terkait aktivitas bisnis serta komunitas MSG.
+    body: `Artikel dan pengumuman terkait aktivitas bisnis serta komunitas MSG. Temukan update pembukaan outlet, program promo keluarga, aktivitas komunitas, dan insight operasional dari unit-unit seperti J Chicken Ciledug dan Luuca Ciledug.
+
+Tim Corporate Communications MSG mempublikasikan berita secara berkala agar pelanggan dan mitra tetap terhubung dengan perkembangan ekosistem bisnis kami. Untuk konteks industri lifestyle dan F&B Indonesia, lihat juga sumber independen seperti situs Kementerian Pariwisata dan Ekonomi Kreatif (https://kemenparekraf.go.id).
 
 ${SHARED_CLOSING}`,
   },
@@ -84,9 +95,23 @@ ${SHARED_CLOSING}`,
     path: "/contact",
     title: "Kontak | PT. Mari Sukses Gemilang",
     description:
-      "Hubungi PT. Mari Sukses Gemilang — alamat, peta, dan formulir kontak.",
+      "Hubungi PT. Mari Sukses Gemilang di Cirebon — alamat Head Office Jl. Tuparev, peta lokasi, email korporat, telepon, dan formulir pesan kemitraan.",
     h1: "Hubungi PT. Mari Sukses Gemilang.",
-    body: `Saluran komunikasi resmi MSG untuk pertanyaan kemitraan, lokasi unit, dan informasi umum.
+    body: `Saluran komunikasi resmi MSG untuk pertanyaan kemitraan, lokasi unit, dan informasi umum. Head Office berlokasi di Jl. Tuparev No.20, Sutawinangun, Kec. Kedawung, Kabupaten Cirebon, Jawa Barat 45153. Hubungi kami melalui info@msg-group.co.id atau partnerships@msg-group.co.id.
+
+Tim kami siap mendiskusikan peluang kerja sama, menjawab pertanyaan pelanggan, dan memberikan informasi strategis terkait unit bisnis dalam jaringan MSG.
+
+${SHARED_CLOSING}`,
+  },
+  "/privacy": {
+    path: "/privacy",
+    title: "Kebijakan Privasi | PT. Mari Sukses Gemilang",
+    description:
+      "Kebijakan privasi PT. Mari Sukses Gemilang: cara kami mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi pengunjung situs serta pelanggan.",
+    h1: "Kebijakan Privasi PT. Mari Sukses Gemilang.",
+    body: `Dokumen ini menjelaskan bagaimana PT. Mari Sukses Gemilang mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan melalui situs web, formulir kontak, atau saluran komunikasi resmi lainnya.
+
+Kami berkomitmen menjaga kerahasiaan data sesuai praktik yang wajar dan peraturan yang berlaku di Indonesia. Untuk pertanyaan terkait privasi, hubungi info@msg-group.co.id.
 
 ${SHARED_CLOSING}`,
   },
@@ -190,7 +215,7 @@ export function buildCrawlableRoot(page) {
   </nav>
 </main>
 <footer>
-  <p>&copy; ${new Date().getFullYear()} ${escapeHtml(SITE_NAME)}. <a href="/sitemap.xml">Sitemap</a></p>
+  <p>&copy; ${new Date().getFullYear()} ${escapeHtml(SITE_NAME)}. <a href="/privacy">Kebijakan Privasi</a> · <a href="/sitemap.xml">Sitemap</a></p>
 </footer>`.trim();
 }
 

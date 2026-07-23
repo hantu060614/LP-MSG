@@ -73,7 +73,8 @@ export default function Business() {
           <div className="max-w-3xl">
             <span className="inline-block py-1 px-3 bg-[#fde8eb] text-[#D90429] text-xs font-bold rounded-full mb-6 uppercase tracking-wider">Portofolio Kami</span>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-zinc-900 mb-6">Jaringan Bisnis &<br />Gaya Hidup</h1>
-            <p className="text-zinc-600 text-lg leading-relaxed max-w-2xl">PT. Mari Sukses Gemilang mengelola portofolio bisnis yang berfokus pada pengalaman gaya hidup, F&B, dan retail berkualitas tinggi.</p>
+            <p className="text-zinc-600 text-lg leading-relaxed max-w-2xl mb-4">PT. Mari Sukses Gemilang mengelola portofolio bisnis yang berfokus pada pengalaman gaya hidup, F&B, dan retail berkualitas tinggi di Cirebon dan sekitarnya.</p>
+            <p className="text-zinc-500 text-base leading-relaxed max-w-2xl">Dari restoran dan cafe hingga fasilitas olahraga, hiburan, serta retail perhiasan — setiap unit dirancang untuk menghadirkan standar layanan yang konsisten, suasana yang nyaman, dan nilai jangka panjang bagi pelanggan serta komunitas lokal.</p>
           </div>
         </div>
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none hidden lg:block">

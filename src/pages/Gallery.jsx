@@ -17,7 +17,8 @@ export default function Gallery() {
         <div className="max-w-3xl">
           <span className="text-[#D90429] font-bold text-sm uppercase tracking-widest mb-4 block">Dokumentasi Visual</span>
           <h1 className="text-5xl font-bold text-zinc-900 mb-4">Galeri Ekosistem Bisnis</h1>
-          <p className="text-lg text-zinc-600 mb-8">Melihat lebih dekat fasilitas, suasana, dan operasional dari jaringan unit bisnis unggulan di bawah naungan PT. Mari Sukses Gemilang.</p>
+          <p className="text-lg text-zinc-600 mb-4">Melihat lebih dekat fasilitas, suasana, dan operasional dari jaringan unit bisnis unggulan di bawah naungan PT. Mari Sukses Gemilang.</p>
+          <p className="text-base text-zinc-500 mb-8 max-w-2xl leading-relaxed">Dokumentasi mencakup outlet F&B, cafe, olahraga, dan hiburan — dari J Chicken, Ulon, Luuca, Araichi Ramen, hingga Padelnis Sport. Filter kategori membantu Anda menemukan visual yang relevan sebelum berkunjung langsung ke lokasi.</p>
         </div>
 
         {/* Filters */}

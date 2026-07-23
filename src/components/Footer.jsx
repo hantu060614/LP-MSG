@@ -71,8 +71,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-6 border-t border-gray-300 text-center text-gray-500 font-medium">
-        © Copyright 2026 PT. MARI SUKSES GEMILANG
+      <div className="max-w-7xl mx-auto px-6 py-6 border-t border-gray-300 text-center text-gray-500 font-medium flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>© Copyright 2026 PT. MARI SUKSES GEMILANG</span>
+        <span className="hidden sm:inline text-gray-300" aria-hidden>
+          ·
+        </span>
+        <Link
+          to="/privacy"
+          className="text-gray-600 hover:text-[#D90429] font-medium transition-colors"
+        >
+          Kebijakan Privasi
+        </Link>
       </div>
     </footer>
   );

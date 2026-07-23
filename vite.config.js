@@ -10,7 +10,7 @@ import {
 } from "./src/seo/pages.js";
 
 /** SPA routes that need a physical shell on hosts without URL rewrite (LiteSpeed). */
-const SPA_ROUTES = ["about", "business", "gallery", "news", "contact"];
+const SPA_ROUTES = ["about", "business", "gallery", "news", "contact", "privacy"];
 
 function injectSeoIntoHtml(html, page) {
   const headTags = buildHeadTags(page);

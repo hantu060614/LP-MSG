@@ -11,7 +11,8 @@ export default function Contact() {
         <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
           <span className="text-[#D90429] font-bold uppercase tracking-widest text-sm mb-4 block">Hubungi Kami</span>
           <h1 className="text-5xl font-bold text-zinc-900 mb-6">Mari Bangun Masa Depan Bersama</h1>
-          <p className="text-zinc-500 text-lg">Tim ahli kami siap mendiskusikan peluang kemitraan, menjawab pertanyaan Anda, dan memberikan solusi strategis untuk bisnis Anda.</p>
+          <p className="text-zinc-500 text-lg mb-4">Tim ahli kami siap mendiskusikan peluang kemitraan, menjawab pertanyaan Anda, dan memberikan solusi strategis untuk bisnis Anda.</p>
+          <p className="text-zinc-500 text-base max-w-2xl mx-auto leading-relaxed">Head Office MSG berlokasi di Jl. Tuparev, Kedawung, Cirebon. Gunakan formulir di bawah, email korporat, atau telepon hunting untuk pertanyaan umum, kerja sama brand, maupun informasi lokasi unit usaha dalam jaringan lifestyle kami.</p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
