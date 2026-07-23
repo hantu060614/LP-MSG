@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import { PATHS } from "../seo/pages.js";
 
 const navLinks = [
-  { label: "Beranda", to: "/" },
-  { label: "Tentang Kami", to: "/about" },
-  { label: "Unit Bisnis", to: "/business" },
-  { label: "Galeri", to: "/gallery" },
-  { label: "Berita", to: "/news" },
-  { label: "Hubungi Kami", to: "/contact" },
+  { label: "Beranda", to: PATHS.home },
+  { label: "Tentang Kami", to: PATHS.about },
+  { label: "Unit Bisnis", to: PATHS.business },
+  { label: "Galeri", to: PATHS.gallery },
+  { label: "Berita", to: PATHS.news },
+  { label: "Hubungi Kami", to: PATHS.contact },
 ];
 
 const socialLinks = [
@@ -23,11 +24,12 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-12 lg:gap-16 relative z-10">
-        {/* Brand */}
         <div className="w-full md:w-1/4 flex flex-col space-y-4">
           <div className="flex items-center mb-4">
-            <h4 className="font-bold text-[#1e293b] text-sm tracking-wide uppercase">PT. Mari Sukses Gemilang</h4>
-            <svg className="ml-3 rounded-[2px] shadow-[0_1px_2px_rgba(0,0,0,0.15)]" style={{ width: 24, height: 16, minWidth: 24 }} viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+            <Link to={PATHS.home} className="flex items-center">
+              <img src="/logo.svg" alt="PT. Mari Sukses Gemilang" className="h-9 w-auto object-contain mr-3" />
+            </Link>
+            <svg className="ml-auto md:ml-3 rounded-[2px] shadow-[0_1px_2px_rgba(0,0,0,0.15)]" style={{ width: 24, height: 16, minWidth: 24 }} viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
               <rect width="3" height="2" fill="#ffffff" />
               <rect width="3" height="1" fill="#ce1126" />
             </svg>
@@ -45,7 +47,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Menu */}
         <div className="w-full md:w-1/4 flex flex-col space-y-4">
           <h4 className="font-bold text-[#1e293b] text-sm tracking-wide mb-2 uppercase">Menu Utama</h4>
           <div className="flex flex-col space-y-3 text-sm">
@@ -57,7 +58,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social */}
         <div className="w-full md:w-2/4 flex flex-col space-y-4">
           <h4 className="font-bold text-[#1e293b] text-sm tracking-wide mb-2 uppercase">Jaringan Sosial Media</h4>
           <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs">
@@ -77,7 +77,7 @@ export default function Footer() {
           ·
         </span>
         <Link
-          to="/privacy"
+          to={PATHS.privacy}
           className="text-gray-600 hover:text-[#D90429] font-medium transition-colors"
         >
           Kebijakan Privasi

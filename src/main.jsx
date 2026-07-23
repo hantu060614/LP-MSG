@@ -3,15 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./input.css";
 
-// LiteSpeed serves /about/ etc. — strip before React so assets & routes match
+// LiteSpeed serves /about/ — keep trailing slash so URLs match server canonical
 if (typeof window !== "undefined") {
   const { pathname, search, hash } = window.location;
-  if (pathname.length > 1 && pathname.endsWith("/")) {
-    window.history.replaceState(
-      null,
-      "",
-      `${pathname.replace(/\/+$/, "")}${search}${hash}`,
-    );
+  if (
+    pathname.length > 1 &&
+    !pathname.endsWith("/") &&
+    !/\.[a-z0-9]+$/i.test(pathname)
+  ) {
+    window.history.replaceState(null, "", `${pathname}/${search}${hash}`);
   }
 }
 

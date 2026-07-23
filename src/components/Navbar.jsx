@@ -1,45 +1,44 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { PATHS, normalizePath } from "../seo/pages.js";
 
 const navLinks = [
-  { label: "Beranda", to: "/" },
-  { label: "Tentang Kami", to: "/about" },
-  { label: "Unit Bisnis", to: "/business" },
-  { label: "Galeri", to: "/gallery" },
-  { label: "Berita", to: "/news" },
+  { label: "Beranda", to: PATHS.home },
+  { label: "Tentang Kami", to: PATHS.about },
+  { label: "Unit Bisnis", to: PATHS.business },
+  { label: "Galeri", to: PATHS.gallery },
+  { label: "Berita", to: PATHS.news },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { pathname } = useLocation();
+  const current = normalizePath(pathname);
 
   return (
     <nav className="fixed top-0 left-0 right-0 h-20 bg-white z-[1000] border-b border-gray-200 flex items-center shadow-sm">
       <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 md:grid-cols-[1fr_auto_1fr]">
-        {/* Logo */}
         <div className="flex justify-start">
-          <Link to="/" className="text-2xl font-bold leading-none tracking-tighter text-[#D90429]" style={{ fontFamily: "sans-serif" }}>
-            MSG
+          <Link to={PATHS.home} className="flex items-center py-1 transition-opacity hover:opacity-90">
+            <img src="/logo.svg" alt="PT. Mari Sukses Gemilang" className="h-10 md:h-11 w-auto object-contain" />
           </Link>
         </div>
 
-        {/* Desktop Nav — true center between equal side columns */}
         <div className="hidden items-center justify-center gap-8 text-sm font-medium md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={pathname === item.to ? "text-[#D90429]" : "text-zinc-500 transition-colors hover:text-zinc-900"}
+              className={current === normalizePath(item.to) ? "text-[#D90429]" : "text-zinc-500 transition-colors hover:text-zinc-900"}
             >
               {item.label}
             </Link>
           ))}
         </div>
 
-        {/* Desktop CTA / Mobile button — mirrors logo column width */}
         <div className="flex items-center justify-end">
           <Link
-            to="/contact"
+            to={PATHS.contact}
             className="hidden rounded-lg bg-[#D90429] px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#B00020] md:inline-flex"
           >
             Hubungi Kami
@@ -57,7 +56,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {mobileOpen && (
         <div className="absolute top-20 left-0 w-full bg-white border-b border-zinc-200 shadow-2xl flex flex-col z-[1001] md:hidden">
           <div className="max-w-7xl mx-auto w-full px-6 py-8 flex flex-col space-y-5">
@@ -66,14 +64,14 @@ export default function Navbar() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className={pathname === item.to ? "text-[#D90429] font-bold text-lg block" : "text-zinc-600 font-bold text-lg hover:text-[#D90429] block"}
+                className={current === normalizePath(item.to) ? "text-[#D90429] font-bold text-lg block" : "text-zinc-600 font-bold text-lg hover:text-[#D90429] block"}
               >
                 {item.label}
               </Link>
             ))}
             <div className="pt-6 mt-2 border-t border-zinc-100">
               <Link
-                to="/contact"
+                to={PATHS.contact}
                 onClick={() => setMobileOpen(false)}
                 className="block w-full bg-[#D90429] text-white px-6 py-4 rounded-xl font-bold text-base shadow-lg text-center"
               >

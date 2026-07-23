@@ -9,6 +9,7 @@ import {
 import PageSeo from "./components/PageSeo.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import { withTrailingSlash } from "./seo/pages.js";
 
 const About = lazy(() => import("./pages/About.jsx"));
 const Business = lazy(() => import("./pages/Business.jsx"));
@@ -33,17 +34,16 @@ function RouteFallback() {
   );
 }
 
-/** Serve /about without trailing slash — strip slash for React Router. */
-function StripTrailingSlash({ children }) {
+/** Match LiteSpeed: keep trailing slash on content URLs. */
+function EnsureTrailingSlash({ children }) {
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const { pathname, search, hash } = location;
-    if (pathname.length > 1 && pathname.endsWith("/")) {
-      navigate(`${pathname.replace(/\/+$/, "")}${search}${hash}`, {
-        replace: true,
-      });
+    const next = withTrailingSlash(pathname);
+    if (next !== pathname) {
+      navigate(`${next}${search}${hash}`, { replace: true });
     }
   }, [location, navigate]);
 
@@ -53,7 +53,7 @@ function StripTrailingSlash({ children }) {
 export default function App() {
   return (
     <Router>
-      <StripTrailingSlash>
+      <EnsureTrailingSlash>
         <PageSeo />
         <a
           href="#main-content"
@@ -68,20 +68,28 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/about/" element={<About />} />
                 <Route path="/business" element={<Business />} />
+                <Route path="/business/" element={<Business />} />
                 <Route path="/gallery" element={<Gallery />} />
+                <Route path="/gallery/" element={<Gallery />} />
                 <Route path="/news" element={<News />} />
+                <Route path="/news/" element={<News />} />
                 <Route path="/news/:id" element={<NewsDetail />} />
+                <Route path="/news/:id/" element={<NewsDetail />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/contact/" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
+                <Route path="/privacy/" element={<Privacy />} />
                 <Route path="/unit/:id" element={<UnitDetail />} />
+                <Route path="/unit/:id/" element={<UnitDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </main>
           <Footer />
         </div>
-      </StripTrailingSlash>
+      </EnsureTrailingSlash>
     </Router>
   );
 }

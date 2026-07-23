@@ -7,7 +7,7 @@ import { businessUnits, businessCategories, isInfoPending } from "../data/siteDa
 function unitHref(unit) {
   if (unit.url === null) return null;
   if (typeof unit.url === "string" && unit.url.length) return unit.url;
-  return `/unit/${unit.id}`;
+  return `/unit/${unit.id}/`;
 }
 
 function BusinessCard({ unit, compact = false }) {
@@ -133,8 +133,8 @@ export default function Business() {
             <p className="text-zinc-600 text-lg">Looking to collaborate with one of our business units or explore investment opportunities? Our team is ready to assist you.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="bg-[#D90429] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#B00020] transition-all">Get in Touch</Link>
-            <Link to="/about" className="bg-white border-2 border-[#D90429] text-[#D90429] px-8 py-4 rounded-lg font-bold hover:bg-red-50 transition-all">Pelajari Lebih Lanjut</Link>
+            <Link to="/contact/" className="bg-[#D90429] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#B00020] transition-all">Get in Touch</Link>
+            <Link to="/about/" className="bg-white border-2 border-[#D90429] text-[#D90429] px-8 py-4 rounded-lg font-bold hover:bg-red-50 transition-all">Pelajari Lebih Lanjut</Link>
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ export default function NewsDetail() {
       <header className="pt-32 pb-12 bg-zinc-50 border-b border-zinc-100">
         <div className="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
           <div className="flex items-center justify-center gap-3 text-sm mb-6">
-            <Link to="/news" className="text-zinc-500 hover:text-red-600 transition-colors">Berita Utama</Link>
+            <Link to="/news/" className="text-zinc-500 hover:text-red-600 transition-colors">Berita Utama</Link>
             <span className="text-zinc-300">/</span>
             <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full font-bold text-xs tracking-wider uppercase">{article.category}</span>
             <span className="text-zinc-300">/</span>
@@ -63,6 +63,18 @@ export default function NewsDetail() {
             {(article.content || []).map((para, i) => (
               <p key={i} className="mb-8 text-zinc-700 leading-relaxed">{para}</p>
             ))}
+            <p className="mb-8 text-zinc-700 leading-relaxed">
+              Untuk konteks industri pariwisata dan ekonomi kreatif di Indonesia, lihat juga{" "}
+              <a
+                href="https://kemenparekraf.go.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#D90429] font-semibold hover:underline"
+              >
+                Kementerian Pariwisata dan Ekonomi Kreatif
+              </a>
+              .
+            </p>
             {article.quote && (
               <div className="my-16 pl-8 py-4 border-l-4 border-[#D90429] bg-red-50/50 rounded-r-xl">
                 <blockquote className="text-2xl font-semibold italic text-zinc-800 m-0 leading-snug">"{article.quote.text}"</blockquote>
@@ -88,13 +100,13 @@ export default function NewsDetail() {
               <h2 className="font-bold text-3xl mb-2">Berita Terkait</h2>
               <p className="text-zinc-500">Jelajahi informasi dan pembaruan lain dari perusahaan kami.</p>
             </div>
-            <Link to="/news" className="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all hidden md:flex">
+            <Link to="/news/" className="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all hidden md:flex">
               Lihat Semua Berita <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {related.map((rel, idx) => (
-              <Link key={rel.id} to={`/news/${rel.id}`} className="bg-white rounded-xl overflow-hidden border border-zinc-100 group shadow-sm hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
+              <Link key={rel.id} to={`/news/${rel.id}/`} className="bg-white rounded-xl overflow-hidden border border-zinc-100 group shadow-sm hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
                 <div className="h-48 overflow-hidden"><img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={rel.image} alt={rel.alt || rel.title} loading="lazy" /></div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-xs text-zinc-500 mb-4">

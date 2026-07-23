@@ -116,7 +116,7 @@ export default function Privacy() {
           </Link>{" "}
           atau{" "}
           <Link
-            to="/contact"
+            to="/contact/"
             className="text-[#D90429] font-semibold hover:underline"
           >
             Hubungi Kami

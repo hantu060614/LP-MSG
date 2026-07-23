@@ -1,30 +1,25 @@
 # Apache / LiteSpeed — SPA + physical route shells
 # Vite copies public/.htaccess → dist/.htaccess on build
-# Canonical: /about (no trailing slash). /about/ 301 → /about.
+# Canonical: /about/ (trailing slash). /about 301 → /about/.
 
 Options -MultiViews
-DirectorySlash Off
+DirectorySlash On
 RewriteEngine On
 RewriteBase /
 DirectoryIndex index.html
 
-# Force HTTPS (when behind TLS terminator that sets HTTPS=on)
+# Force HTTPS when not already HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Drop trailing slash on physical route dirs (except root)
-RewriteCond %{REQUEST_URI} ^(.+)/$
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+# Add trailing slash to extensionless paths (skip real files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,8}$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
 
-# Serve /about from about/index.html without a slash redirect
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_URI} !/$
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.*)$ $1/index.html [L]
-
-# If rewrite is allowed: serve existing files, else fall back to SPA shell
+# SPA fallback for unknown routes
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -50,7 +45,6 @@ ErrorDocument 404 /index.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # HTML / documents: short freshness so deploys propagate
   Header set Cache-Control "public, max-age=3600, must-revalidate"
   <FilesMatch "\.(css|js|mjs|png|jpe?g|gif|svg|webp|ico|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
@@ -60,6 +54,5 @@ ErrorDocument 404 /index.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-  # Allow self + Google Fonts / Maps embeds used by the site
   Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; media-src 'self'"
 </IfModule>

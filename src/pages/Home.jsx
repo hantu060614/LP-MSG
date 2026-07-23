@@ -22,7 +22,7 @@ export default function Home() {
         ? null
         : typeof unit.url === "string" && unit.url.length
           ? unit.url
-          : `/unit/${unit.id}`;
+          : `/unit/${unit.id}/`;
     const isPending = isInfoPending(unit.hours);
     const hasStatus = Boolean(unit.status);
     const cardStateClass = hasStatus || !href ? " opacity-80" : "";
@@ -95,8 +95,8 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6 drop-shadow-xl">Kami saksi di setiap moment terbaik kamu.</h1>
           <p className="text-lg md:text-xl text-zinc-200 mb-12 font-medium max-w-2xl drop-shadow-md leading-relaxed">Membangun brand lifestyle yang tidak hanya dipercaya, tetapi juga menjadi bagian dari kehidupan sehari-hari Anda.</p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-            <Link to="/business" className="bg-[#D90429] hover:bg-[#B00020] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(217,4,41,0.4)] flex justify-center items-center gap-2 w-full sm:w-auto text-lg">Rasakan Pengalaman Baru</Link>
-            <Link to="/gallery" className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:border-white px-10 py-4 rounded-xl font-bold transition-all duration-300 w-full sm:w-auto text-lg">Explore & Taste</Link>
+            <Link to="/business/" className="bg-[#D90429] hover:bg-[#B00020] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(217,4,41,0.4)] flex justify-center items-center gap-2 w-full sm:w-auto text-lg">Rasakan Pengalaman Baru</Link>
+            <Link to="/gallery/" className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:border-white px-10 py-4 rounded-xl font-bold transition-all duration-300 w-full sm:w-auto text-lg">Explore & Taste</Link>
           </div>
         </div>
       </section>
@@ -191,11 +191,11 @@ export default function Home() {
               <h2 className="font-heading font-bold text-4xl text-zinc-900 mb-4">Wawasan Terbaru</h2>
               <p className="text-zinc-500 max-w-xl text-lg">Dapatkan informasi terbaru mengenai pergerakan perusahaan dan laporan industri kami.</p>
             </div>
-            <Link to="/news" className="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">Lihat Semua Berita <span className="material-symbols-outlined">arrow_forward</span></Link>
+            <Link to="/news/" className="text-[#D90429] font-bold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">Lihat Semua Berita <span className="material-symbols-outlined">arrow_forward</span></Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {newsArticles.slice(0, 3).map((art, idx) => (
-              <Link key={art.id} to={`/news/${art.id}`} className="bg-white rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
+              <Link key={art.id} to={`/news/${art.id}/`} className="bg-white rounded-xl overflow-hidden group cursor-pointer" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
                 <div className="h-64 overflow-hidden rounded-xl mb-6">
                   <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={art.image} alt={art.alt} />
                 </div>
@@ -221,8 +221,8 @@ export default function Home() {
             <h2 className="text-white font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">Siap Mengakselerasi Kesuksesan Anda?</h2>
             <p className="text-zinc-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">Bermitra dengan PT. Mari Sukses Gemilang untuk membuka potensi baru dan mendorong bisnis Anda menuju pertumbuhan berkelanjutan.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact" className="bg-[#D90429] text-white hover:bg-[#B00020] px-10 py-4 rounded-lg font-bold shadow-xl transition-all">Bekerja Sama</Link>
-              <Link to="/about" className="bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold hover:bg-white/10 transition-all">Jadwalkan Konsultasi</Link>
+              <Link to="/contact/" className="bg-[#D90429] text-white hover:bg-[#B00020] px-10 py-4 rounded-lg font-bold shadow-xl transition-all">Bekerja Sama</Link>
+              <Link to="/about/" className="bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold hover:bg-white/10 transition-all">Jadwalkan Konsultasi</Link>
             </div>
           </div>
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#D90429]/20 rounded-full blur-[100px] -mr-32 -mt-32" />

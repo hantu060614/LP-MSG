@@ -32,7 +32,7 @@ export default function News() {
           {newsArticles.map((art, idx) => (
             <Link
               key={art.id}
-              to={`/news/${art.id}`}
+              to={`/news/${art.id}/`}
               className="bg-white rounded-xl overflow-hidden group cursor-pointer border border-zinc-100 shadow-sm hover:shadow-xl transition-all"
               data-aos="fade-up"
               data-aos-delay={100 + (idx % 3) * 100}
