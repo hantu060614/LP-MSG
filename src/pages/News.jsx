@@ -1,9 +1,10 @@
 import { useEffect } from "react";
+import { initAos } from "../lib/initAos.js";
 import { Link } from "react-router-dom";
 import { newsArticles } from "../data/siteData";
 
 export default function News() {
-  useEffect(() => { window.AOS?.init({ duration: 600, once: true }); }, []);
+  useEffect(() => { initAos(); }, []);
 
   return (
     <main className="pt-32 pb-20">

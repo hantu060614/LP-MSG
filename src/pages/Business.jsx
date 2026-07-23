@@ -1,18 +1,27 @@
 import { useEffect } from "react";
+import { initAos } from "../lib/initAos.js";
 import { Link } from "react-router-dom";
-import { businessUnits, businessCategories } from "../data/siteData";
+import { businessUnits, businessCategories, isInfoPending } from "../data/siteData";
+
+/** url: null = belum ada detail; string = eksternal; undefined = /unit/:id */
+function unitHref(unit) {
+  if (unit.url === null) return null;
+  if (typeof unit.url === "string" && unit.url.length) return unit.url;
+  return `/unit/${unit.id}`;
+}
 
 function BusinessCard({ unit, compact = false }) {
-  const link = unit.url !== null && unit.url !== undefined ? `/unit/${unit.id}` : "/404";
-  const isPending = (unit.hours || "").toLowerCase().includes("tbc");
+  const href = unitHref(unit);
+  const isPending = isInfoPending(unit.hours);
   const hasStatus = Boolean(unit.status);
   const imageH = compact ? "h-48" : "h-56";
-  const cardStateClass = hasStatus ? " opacity-80" : "";
+  const cardStateClass = hasStatus || !href ? " opacity-80" : "";
   const imgClass = hasStatus ? " mix-blend-luminosity opacity-70" : "";
   const labelClass = hasStatus ? "bg-zinc-800/90 text-white" : "bg-white/90 text-[#D90429]";
+  const cardClass = `bg-white rounded-xl shadow-sm transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full${cardStateClass}${href ? " cursor-pointer hover:shadow-xl" : " cursor-default"}`;
 
-  return (
-    <Link to={link} className={`cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full${cardStateClass}`}>
+  const body = (
+    <>
       <div className={`relative ${imageH} overflow-hidden`}>
         <img className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105${imgClass}`} src={unit.image} alt={unit.name} loading="lazy" />
         {hasStatus && (
@@ -26,21 +35,35 @@ function BusinessCard({ unit, compact = false }) {
         <h3 className="font-bold text-xl text-zinc-900 mb-2">{unit.name}</h3>
         <p className="text-zinc-500 text-sm mb-4 flex items-start gap-2">
           <span className="material-symbols-outlined text-base mt-0.5">location_on</span>
-          <span>{unit.location || "[Detail Alamat Menyusul]"}</span>
+          <span>{unit.location || "Informasi alamat segera tersedia"}</span>
         </p>
         <div className="mt-auto pt-4 border-t border-zinc-100">
           <p className="text-zinc-600 text-sm flex items-center gap-2 font-medium">
             <span className="material-symbols-outlined text-base text-zinc-400">schedule</span>
-            <span className={isPending ? "italic text-zinc-400" : ""}>{unit.hours || "Jam Operasional: TBC"}</span>
+            <span className={isPending ? "italic text-zinc-400" : ""}>{unit.hours || "Hubungi outlet untuk jam operasional"}</span>
           </p>
         </div>
       </div>
+    </>
+  );
+
+  if (!href) return <div className={cardClass}>{body}</div>;
+  if (href.startsWith("http")) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={cardClass}>
+        {body}
+      </a>
+    );
+  }
+  return (
+    <Link to={href} className={cardClass}>
+      {body}
     </Link>
   );
 }
 
 export default function Business() {
-  useEffect(() => { window.AOS?.init({ duration: 600, once: true }); }, []);
+  useEffect(() => { initAos(); }, []);
 
   return (
     <main className="pt-20">

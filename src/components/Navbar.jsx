@@ -15,40 +15,42 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 h-20 bg-white z-[1000] border-b border-gray-200 flex items-center shadow-sm">
-      <div className="max-w-7xl mx-auto w-full px-6 flex justify-between items-center">
+      <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 md:grid-cols-[1fr_auto_1fr]">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-[#D90429] tracking-tighter leading-none flex-shrink-0" style={{ fontFamily: "sans-serif" }}>
-          MSG
-        </Link>
+        <div className="flex justify-start">
+          <Link to="/" className="text-2xl font-bold leading-none tracking-tighter text-[#D90429]" style={{ fontFamily: "sans-serif" }}>
+            MSG
+          </Link>
+        </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center justify-center flex-1 px-8 space-x-8 text-sm font-medium">
+        {/* Desktop Nav — true center between equal side columns */}
+        <div className="hidden items-center justify-center gap-8 text-sm font-medium md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={pathname === item.to ? "text-[#D90429]" : "text-zinc-500 hover:text-zinc-900 transition-colors"}
+              className={pathname === item.to ? "text-[#D90429]" : "text-zinc-500 transition-colors hover:text-zinc-900"}
             >
               {item.label}
             </Link>
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center flex-shrink-0">
-          <Link to="/contact" className="bg-[#D90429] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-[#B00020] transition-colors shadow-sm">
+        {/* Desktop CTA / Mobile button — mirrors logo column width */}
+        <div className="flex items-center justify-end">
+          <Link
+            to="/contact"
+            className="hidden rounded-lg bg-[#D90429] px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#B00020] md:inline-flex"
+          >
             Hubungi Kami
           </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="flex items-center justify-center text-zinc-900 w-10 h-10 -mr-2 focus:outline-none hover:bg-zinc-50 rounded-lg transition-colors"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-900 transition-colors hover:bg-zinc-50 focus:outline-none md:hidden"
             aria-label="Toggle mobile menu"
+            aria-expanded={mobileOpen}
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>

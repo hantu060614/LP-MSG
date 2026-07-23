@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { initAos } from "../lib/initAos.js";
 import { Link, useParams } from "react-router-dom";
 import { newsArticles } from "../data/siteData";
 import NotFound from "./NotFound";
@@ -8,7 +9,7 @@ export default function NewsDetail() {
   const article = newsArticles.find((a) => a.id === id) || newsArticles[0];
   const related = newsArticles.filter((a) => a.id !== article.id).slice(0, 3);
 
-  useEffect(() => { window.AOS?.init({ duration: 600, once: true }); }, []);
+  useEffect(() => { initAos(); }, []);
 
   if (!article) return <NotFound />;
 

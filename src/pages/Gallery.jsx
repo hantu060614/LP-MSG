@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { initAos } from "../lib/initAos.js";
 import { galleryItems, galleryFilters } from "../data/siteData";
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [lightbox, setLightbox] = useState(null);
 
-  useEffect(() => { window.AOS?.init({ duration: 600, once: true }); }, []);
+  useEffect(() => { initAos(); }, []);
 
   const filtered = activeFilter === "all" ? galleryItems : galleryItems.filter((i) => i.categoryId === activeFilter);
 

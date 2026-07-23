@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { initAos } from "../lib/initAos.js";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -206,19 +207,17 @@ function TimelineSection() {
 
 export default function About() {
   useEffect(() => {
-    window.AOS?.init({ duration: 600, once: true });
+    initAos();
   }, []);
 
   return (
     <>
       <SubNav />
-      <main>
-        <HeroSection />
-        <VisiMisiSection />
-        <CoreValuesSection />
-        <LeadershipSection />
-        <TimelineSection />
-      </main>
+      <HeroSection />
+      <VisiMisiSection />
+      <CoreValuesSection />
+      <LeadershipSection />
+      <TimelineSection />
     </>
   );
 }

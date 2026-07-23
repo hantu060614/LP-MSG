@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import { initAos } from "../lib/initAos.js";
 import { Link } from "react-router-dom";
-import { businessUnits, businessCategories, newsArticles } from "../data/siteData";
+import { businessUnits, businessCategories, newsArticles, isInfoPending } from "../data/siteData";
 
 const directors = [
   { name: "Budi Santoso", role: "President Director (CEO)", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974" },
@@ -11,25 +12,26 @@ const directors = [
 
 export default function Home() {
   useEffect(() => {
-    window.AOS?.init({ duration: 600, once: true });
+    initAos();
   }, []);
 
   const renderUnit = (unit, index) => {
-    const link = unit.url !== null && unit.url !== undefined ? `/unit/${unit.id}` : "/404";
-    const isPending = (unit.hours || "").toLowerCase().includes("tbc");
+    // url: null = belum ada detail; string = eksternal; undefined = /unit/:id
+    const href =
+      unit.url === null
+        ? null
+        : typeof unit.url === "string" && unit.url.length
+          ? unit.url
+          : `/unit/${unit.id}`;
+    const isPending = isInfoPending(unit.hours);
     const hasStatus = Boolean(unit.status);
-    const cardStateClass = hasStatus ? " opacity-80" : "";
+    const cardStateClass = hasStatus || !href ? " opacity-80" : "";
     const imgClass = hasStatus ? " mix-blend-luminosity opacity-70" : "";
     const labelClass = hasStatus ? "bg-zinc-800/90 text-white" : "bg-white/90 text-[#D90429]";
+    const cardClass = `bg-white rounded-xl shadow-sm transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full${cardStateClass}${href ? " cursor-pointer hover:shadow-xl" : " cursor-default"}`;
 
-    return (
-      <Link
-        key={unit.id}
-        to={link}
-        className={`cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-zinc-100 flex flex-col h-full${cardStateClass}`}
-        data-aos="fade-up"
-        data-aos-delay={100 + ((index || 0) % 8) * 50}
-      >
+    const inner = (
+      <>
         <div className="relative h-48 overflow-hidden">
           <img className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105${imgClass}`} src={unit.image} alt={unit.name} loading="lazy" />
           {hasStatus && (
@@ -43,15 +45,40 @@ export default function Home() {
           <h3 className="font-heading font-bold text-xl text-zinc-900 mb-2">{unit.name}</h3>
           <p className="text-zinc-500 text-sm mb-4 flex items-start gap-2">
             <span className="material-symbols-outlined text-base mt-0.5">location_on</span>
-            <span>{unit.location || "[Detail Alamat Menyusul]"}</span>
+            <span>{unit.location || "Informasi alamat segera tersedia"}</span>
           </p>
           <div className="mt-auto pt-4 border-t border-zinc-100">
             <p className="text-zinc-600 text-sm flex items-center gap-2 font-medium">
               <span className="material-symbols-outlined text-base text-zinc-400">schedule</span>
-              <span className={isPending ? "italic text-zinc-400" : ""}>{unit.hours || "Jam Operasional: TBC"}</span>
+              <span className={isPending ? "italic text-zinc-400" : ""}>{unit.hours || "Hubungi outlet untuk jam operasional"}</span>
             </p>
           </div>
         </div>
+      </>
+    );
+
+    const aosProps = {
+      "data-aos": "fade-up",
+      "data-aos-delay": 100 + ((index || 0) % 8) * 50,
+    };
+
+    if (!href) {
+      return (
+        <div key={unit.id} className={cardClass} {...aosProps}>
+          {inner}
+        </div>
+      );
+    }
+    if (href.startsWith("http")) {
+      return (
+        <a key={unit.id} href={href} target="_blank" rel="noopener noreferrer" className={cardClass} {...aosProps}>
+          {inner}
+        </a>
+      );
+    }
+    return (
+      <Link key={unit.id} to={href} className={cardClass} {...aosProps}>
+        {inner}
       </Link>
     );
   };
@@ -61,7 +88,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative w-full h-screen min-h-[600px] flex flex-col justify-center items-center overflow-hidden pt-28">
         <div className="absolute inset-0 z-0">
-          <img src="assets/img/banner_home.jpeg" alt="Aktivitas Bisnis" className="w-full h-full object-cover" loading="eager" />
+          <img src="/assets/img/banner_home.jpeg" alt="Aktivitas Bisnis" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/80 via-zinc-900/50 to-zinc-900/80" />
         </div>
         <div className="relative z-10 w-full max-w-4xl px-6 flex flex-col items-center text-center mt-4 md:mt-0" data-aos="fade-up">

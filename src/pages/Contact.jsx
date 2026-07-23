@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { initAos } from "../lib/initAos.js";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  useEffect(() => { window.AOS?.init({ duration: 600, once: true }); }, []);
+  useEffect(() => { initAos(); }, []);
 
   return (
     <main className="pt-32 pb-20 bg-white min-h-screen">
