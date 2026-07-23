@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marisuksesgemilang.co.id/sitemap.xml
